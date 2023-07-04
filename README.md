@@ -11,18 +11,13 @@
 
 
 ## Allure report
+![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/8ccce977-7806-49ce-8bd6-b93235815cda)
 
-![image](https://user-images.githubusercontent.com/38681283/120564585-ed531580-c413-11eb-8515-40979492ec24.png)
 
-## :arrow_forward: [Spotify Allure_TestOps][2]
+## :arrow_forward: 
+## Allure Report screenshots
 
-## AllureTestOps screenshots
 
-![image](https://user-images.githubusercontent.com/38681283/120640087-c0861900-c47a-11eb-891e-34382f8df197.png)
-![image](https://user-images.githubusercontent.com/38681283/120640222-e0b5d800-c47a-11eb-9fc9-15d4bce0180c.png)
-![image](https://user-images.githubusercontent.com/38681283/120640315-00e59700-c47b-11eb-81e5-b46814df3ea2.png)
-![image](https://user-images.githubusercontent.com/38681283/120640404-1eb2fc00-c47b-11eb-8630-5e78fb6e5c92.png)
-![image](https://user-images.githubusercontent.com/38681283/120641333-2921c580-c47c-11eb-9b68-25280b4f8e6e.png)
 
 
 ## Autotests screenrecord
