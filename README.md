@@ -1,5 +1,5 @@
 # HELSI mobile auto-testing
-##### Done as draft of automated mobile testing f-w for mobile app.
+##### Done as an example of automated mobile testing f-w for mobile app.
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/445ab9d4-421a-40ec-bbf9-91febea0489b)  width="40" height="40">
 
 ## TABLE OF CONTENT
