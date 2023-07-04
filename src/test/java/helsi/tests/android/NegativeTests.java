@@ -17,36 +17,24 @@ import org.junit.jupiter.api.Test;
 @Feature("Mobile tests")
 @Story("Android platform")
 @Tags({@Tag("mobile"), @Tag("live")})
-@DisplayName("Testset for 'live' mobile on Android platform tests.")
+@DisplayName("Negative test for reflect allure possibilities.")
 @Owner("xt4k")
 @Layer("Mobile")
 @JiraIssues({@JiraIssue("AUTO-001")})
 
 
-public class SearchTests extends TestBase {
+public class NegativeTests extends TestBase {
     @Test
     @Owner("HELSI_app_demo")
-    @DisplayName("Successful search for drug")
-    void happyPathDrugSearch() {
+    @DisplayName("UnSuccessful search for drug (not found)")
+    void unHappyPathDrugSearch() {
         String searchCriteriaType ="drug_name";
         mainPage
                 .tapToSearchSelectionPopup()
                 .selectCategory(searchCriteriaType);
         searchPage
-                .setSearchString("Kali")
+                .setSearchString("Kaliberda")
                 .resultShouldBePresent();
-    }
-
-    @Test
-    @Owner("HELSI_app_demo")
-    @DisplayName("Successful search by doctor last name")
-    void happyPathDoctorLastnameSearch() {
-        String searchCriteriaType ="doctor_name";
-        mainPage
-                .tapToSearchSelectionPopup()
-                .selectCategory(searchCriteriaType)
-                .mainPageSearch("Петренко",searchCriteriaType)
-                .doctorsFound();
     }
 
 
