@@ -23,3 +23,9 @@
 ![image](https://user-images.githubusercontent.com/38681283/120640315-00e59700-c47b-11eb-81e5-b46814df3ea2.png)
 ![image](https://user-images.githubusercontent.com/38681283/120640404-1eb2fc00-c47b-11eb-8630-5e78fb6e5c92.png)
 ![image](https://user-images.githubusercontent.com/38681283/120641333-2921c580-c47c-11eb-9b68-25280b4f8e6e.png)
+
+
+## Autotests screenrecord
+
+https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/718bcae7-64df-4713-89ae-0dd58a235740
+
