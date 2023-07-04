@@ -11,11 +11,11 @@
 
 
 ## Allure report
+## :arrow_forward: screenshots
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/8ccce977-7806-49ce-8bd6-b93235815cda)
 
 
-## :arrow_forward: 
-## Allure Report screenshots
+
 
 
 
