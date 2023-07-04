@@ -2,8 +2,6 @@
 ##### Done as draft of automated mobile testing f-w for mobile app.
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/445ab9d4-421a-40ec-bbf9-91febea0489b)
 
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/ff1e44ab-8c92-4247-9685-960c9aeadb50)
-
 ## TABLE OF CONTENT
 
 ## Technology stack
