@@ -26,7 +26,7 @@
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/d5bd389f-17e1-4148-b4d6-495b06f17a4a)
 
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/e3f2d0c7-acc4-4996-9025-ef47b29e81bb)
-##### History of run for test:
+##### Run history for test:
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/8b29436e-0c55-4bb2-aceb-86a7ca4e319d)
 
 
