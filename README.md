@@ -12,7 +12,7 @@
 ## Allure report
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/2fabee75-2021-4d13-8ead-f7d2c07bd792)
 ## :arrow_forward: screenshots
-### In purpose negative test
+### In purpose negative test (unsuccessfull search drug by name)
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/dcb3189f-e2fb-4117-89f8-cc5fb57d04a0)
 
 ### Positive tests
