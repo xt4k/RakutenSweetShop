@@ -19,8 +19,9 @@
 
 ### Positive tests
 #### Search by doctor's surname
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/6af0a9be-038f-453c-8ec0-b685b445bdaa)
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/9ef2f24d-65cd-48a0-940d-41b6bd21d711)
+![2023-07-04_18-05-19](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/0a8d274c-b2a4-4e07-8ce9-551e5ae0b783)
+![2023-07-04_18-04-10](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/2aba43f2-41a3-47c2-ad42-9a54c5e6fed1)
+
 
 
 #### Search by drug name
