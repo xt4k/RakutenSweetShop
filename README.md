@@ -15,7 +15,8 @@
 
 ## :arrow_forward: screenshots
 ### In purpose negative test (unsuccessfull search drug by name)
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/dcb3189f-e2fb-4117-89f8-cc5fb57d04a0)
+![2023-07-04_18-01-57](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/63773537-ef75-43c2-9ab5-9b8b0b82a5a0)
+
 
 ### Positive tests
 #### Search by doctor's surname
