@@ -1,6 +1,7 @@
 # HELSI mobile auto-testing
 ##### Done as an example of automated mobile testing f-w for mobile app.
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/445ab9d4-421a-40ec-bbf9-91febea0489b)  
+![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/ff3f7674-61a5-464a-92d5-ea0c367a0967)
+
 ## TABLE OF CONTENT
 
 ## Technology stack
