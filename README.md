@@ -2,7 +2,6 @@
 ##### Done as an example of automated mobile testing f-w for mobile app.
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/ff3f7674-61a5-464a-92d5-ea0c367a0967)
 
-
 ## TABLE OF CONTENT
 
 ## Technology stack
@@ -18,32 +17,17 @@
 ### In purpose negative test (unsuccessfull search drug by name)
 ![2023-07-04_18-01-57](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/63773537-ef75-43c2-9ab5-9b8b0b82a5a0)
 
-
 ### Positive tests
 #### Search by doctor's surname
 ![2023-07-04_18-05-19](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/0a8d274c-b2a4-4e07-8ce9-551e5ae0b783)
 ![2023-07-04_18-04-10](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/2aba43f2-41a3-47c2-ad42-9a54c5e6fed1)
 
-
-
 #### Search by drug name
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/2e68e239-da92-48dc-ba2c-4d6a7c8ee704)
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/d5bd389f-17e1-4148-b4d6-495b06f17a4a)
-
-
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/2bf7a144-6480-4793-aaab-d782936a433e)
-
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/d309b840-314a-4482-8130-7f990446fc8d)
-
-
-
 
 ##### Run history for test:
 ![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/4524537e-b9fc-440f-baba-c0d2ccb23524)
 
-
-
 ## Autotests screenrecord
-
-https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/718bcae7-64df-4713-89ae-0dd58a235740
-
+https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/94b966e7-fe76-4a3b-99fc-30bb4edc3469
