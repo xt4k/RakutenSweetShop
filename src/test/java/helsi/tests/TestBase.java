@@ -8,7 +8,6 @@ import helsi.pages.android.MainPage;
 import helsi.pages.android.SearchPage;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidStartScreenRecordingOptions;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,12 +15,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.time.Duration;
-
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static helsi.helpers.Attach.saveVideoLocally;
 import static helsi.helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
 
@@ -68,6 +64,8 @@ public class TestBase {
         }
      //   saveVideoLocally(sessionId, base64output);
     }
+
+
 
 
 }

@@ -18,9 +18,10 @@ public class BasePage {
 
     @Step("Search result should be greater than '{expectedMore}'")
     public void resultShouldBeMoreThan(SelenideElement element, int expectedMore) {
+        getShot("end of test");
         String number = element.text().split(":")[1].trim();
         log.info("text on element: " + element.text());
-        assertThat(Integer.parseInt(number)).isGreaterThan(expectedMore).describedAs("Expected that found result more than %s",expectedMore);
+        assertThat(Integer.parseInt(number)).as("Expected that found result more than %s",expectedMore).isGreaterThan(expectedMore);
     }
 
     @Step("Attach test design screenshot and page source for method {methodName}")

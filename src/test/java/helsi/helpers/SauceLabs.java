@@ -11,7 +11,7 @@ public class SauceLabs {
         String url = format("https://api-cloud.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
         return given()
-                .auth().basic(Configs.sauceLabs.login(), Configs.sauceLabs.password())
+                .auth().basic(Configs.sauceLabs.userName(), Configs.sauceLabs.accessKey())
                 .log().all()
                 .when()
                 .get(url)

@@ -3,6 +3,7 @@ package helsi.tests.android;
 import helsi.annotations.JiraIssue;
 import helsi.annotations.JiraIssues;
 import helsi.annotations.Layer;
+import helsi.enums.SearchCategory;
 import helsi.tests.TestBase;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -11,6 +12,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+
+import static helsi.enums.SearchCategory.DRUG;
 
 @Tag("android")
 
@@ -28,13 +31,12 @@ public class NegativeTests extends TestBase {
     @Owner("HELSI_app_demo")
     @DisplayName("UnSuccessful search for drug (not found)")
     void unHappyPathDrugSearch() {
-        String searchCriteriaType ="drug_name";
         mainPage
                 .tapToSearchSelectionPopup()
-                .selectCategory(searchCriteriaType);
+                .selectCategory(DRUG);
         searchPage
                 .setSearchString("Kaliberda")
-                .resultShouldBePresent();
+                .analyseResult(DRUG);
     }
 
 

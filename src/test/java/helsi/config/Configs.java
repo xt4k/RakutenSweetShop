@@ -1,5 +1,6 @@
 package helsi.config;
 
+import helsi.config.locator.MainPageConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 public class Configs {
@@ -7,6 +8,8 @@ public class Configs {
     public static LocalDriverConfig mobileDriver = ConfigFactory.create(LocalDriverConfig.class, System.getProperties());
     public static GmailConfig gmail = ConfigFactory.create(GmailConfig.class, System.getProperties());
 
-    public static LocatorConfig locator = ConfigFactory.create(LocatorConfig.class, System.getProperties());
+    public static MainPageConfig locator = ConfigFactory.create(MainPageConfig.class, System.getProperties());
+
+    public static MainPageConfig locatorSearchPage = ConfigFactory.create(MainPageConfig.class, System.getProperties());
 
 }

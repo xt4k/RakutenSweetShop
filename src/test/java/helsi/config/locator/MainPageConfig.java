@@ -1,15 +1,12 @@
-package helsi.config;
+package helsi.config.locator;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("classpath:helsi.properties")
-public interface LocatorConfig extends Config {
+@Config.Sources("classpath:pagelocator/helsi.properties")
+public interface MainPageConfig extends Config {
 
     @Key("mainpage.category.search")
     String mainPageCategorySearch();
-
-    @Key("mainpage.search")
-    String mainpageSearch();
 
     @Key("popup.category.doctor.type")
     String popupCategoryDoctorType();
@@ -33,21 +30,9 @@ public interface LocatorConfig extends Config {
     @Key("search.result.summary")
     String searchResultSummary();
 
-
-    @Key("search.doctor.summary")
-    String searchDoctorsSummary();
-
-
-    @Key("searchpage.search.field")
-    String searchingField();
-
     @Key("drug.find")
     String drugFind();
 
     @Key("search.doctor.name")
     String searchDoctorByName();
-
-
 }
-
-

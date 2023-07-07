@@ -5,12 +5,16 @@ import helsi.annotations.JiraIssues;
 import helsi.annotations.Layer;
 import helsi.tests.TestBase;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+
+import static helsi.enums.SearchCategory.DOCTOR_NAME;
+import static helsi.enums.SearchCategory.DRUG;
 
 @Tag("android")
 
@@ -21,32 +25,30 @@ import org.junit.jupiter.api.Test;
 @Owner("xt4k")
 @Layer("Mobile")
 @JiraIssues({@JiraIssue("AUTO-001")})
-
+@Issue("555")
 
 public class SearchTests extends TestBase {
     @Test
     @Owner("HELSI_app_demo")
     @DisplayName("Successful search for drug")
     void happyPathDrugSearch() {
-        String searchCriteriaType ="drug_name";
         mainPage
                 .tapToSearchSelectionPopup()
-                .selectCategory(searchCriteriaType);
+                .selectCategory(DRUG);
         searchPage
                 .setSearchString("Kali")
-                .resultShouldBePresent();
+                .analyseResult(DRUG);
     }
 
     @Test
     @Owner("HELSI_app_demo")
     @DisplayName("Successful search by doctor last name")
     void happyPathDoctorLastnameSearch() {
-        String searchCriteriaType ="doctor_name";
         mainPage
                 .tapToSearchSelectionPopup()
-                .selectCategory(searchCriteriaType)
-                .mainPageSearch("Петренко",searchCriteriaType)
-                .doctorsFound();
+                .selectCategory(DOCTOR_NAME)
+                .mainPageSearch("Петренко", DOCTOR_NAME)
+                .analyseResult(DOCTOR_NAME);
     }
 
 
