@@ -3,22 +3,20 @@ package helsi.tests.Ios;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
+
 import org.junit.jupiter.api.Test;
 
 public class IOSAppTest {
 
-    private AppiumDriver driver;
+    private static AppiumDriver driver;
 
-    @BeforeClass
-    public void setUp() throws MalformedURLException {
+    @BeforeAll
+    public static void setUp() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "16.7"); // Версія iOS
@@ -38,8 +36,8 @@ public class IOSAppTest {
         // Ваш код для тестування
     }
 
-    @AfterClass
-    public void tearDown() {
+    @AfterAll
+    public static void tearDown() {
         if (driver != null) {
             driver.quit();
         }
