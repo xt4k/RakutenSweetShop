@@ -100,3 +100,9 @@ task runSearchTests2(type: Test) {
         includeTags 'android'
     }
 }
+
+task runAnnaPhoneTest(type: Test) {
+    useJUnitPlatform {
+        includeTags 'anna'
+    }
+}
