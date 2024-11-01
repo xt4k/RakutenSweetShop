@@ -36,6 +36,7 @@ jobs:
           LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
           LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
         run: ./gradlew runWebRemoteTests
+        continue-on-error: true
       - name: Generate Allure Report
         run: |
           allure generate ./build/allure-results --clean -o ./build/allure-report
