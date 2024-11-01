@@ -81,7 +81,7 @@ public class MainPageOrderTests extends TestBase {
 
     @Test
     @JiraIssues({@JiraIssue("AUTO-6723")})
-    @TM4J("9637")
+    @TM4J("9247")
     @DisplayName("Testcase 2. Test the basket Total sum matches the price of individual items based on quantity and currency.")
     @Description("Testcase 2. Test the basket Total sum matches the price of individual items based on quantity and currency.")
     void checkBasketTotalPrice() {
@@ -113,7 +113,7 @@ public class MainPageOrderTests extends TestBase {
     }
 
     @Test
-    @JiraIssues({@JiraIssue("AUTO-2865")})
+    @JiraIssues({@JiraIssue("AUTO-9565")})
     @TM4J("7461")
     @DisplayName("Testcase 3. Change the delivery type to 'Standard Shipping' and verify the total price.")
     @Description("Testcase 3. Change the delivery type to 'Standard Shipping' and verify the total price.")
