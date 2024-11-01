@@ -31,6 +31,7 @@ jobs:
 
       - name: Run tests
         env:
+          ABC_DE: ${{ secrets.ABC_DE }}
           LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
           LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
         run: ./gradlew runLoginRemoteTests #-DLT_USERNAME="$LT_USERNAME" -DLT_ACCESS_KEY="$LT_ACCESS_KEY"
