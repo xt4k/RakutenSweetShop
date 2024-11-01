@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static autotests.drivers.DriverHelper.*;
-import static autotests.helpers.AttachmentsHelper.attachAsText;
 import static autotests.helpers.AttachmentsHelper.attachPageSource;
 import static com.codeborne.selenide.Selenide.*;
 

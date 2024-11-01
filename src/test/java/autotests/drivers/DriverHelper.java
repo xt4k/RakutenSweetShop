@@ -1,12 +1,15 @@
 package autotests.drivers;
 
 import autotests.config.DriverConfig;
+import autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +17,7 @@ import java.util.Map;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
 public class DriverHelper {
+    private static final Logger LOG = LoggerFactory.getLogger(TestBase.class);
 
     public static DriverConfig getDriverConfig() {
         return ConfigFactory.newInstance().create(DriverConfig.class, System.getProperties());
@@ -65,6 +69,7 @@ public class DriverHelper {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = getDriverConfig().baseUrl();
-        System.out.println("LT_UN: " + getDriverConfig().ltUserName());
+        LOG.warn("system emv secret "+ System.getenv("LT_ACCESS_KEY"));
+        LOG.warn("LT_UN: " + getDriverConfig().ltUserName());
     }
 }
