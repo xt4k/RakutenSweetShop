@@ -26,8 +26,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build with Gradle
-        run: ./gradlew clean build
+      - name: CLean with Gradle
+        run: ./gradlew clean
 
       - name: Run tests
         env:
