@@ -13,10 +13,12 @@
 | <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120561799-e88b6300-c40d-11eb-91ba-d4103ef6d4b5.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120561837-f7721580-c40d-11eb-8590-7b3b0b5eb50d.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562013-43bd5580-c40e-11eb-926f-1b8d3dc9e965.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562398-fbeafe00-c40e-11eb-9fe7-3a641bf7115c.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562458-1c1abd00-c40f-11eb-8ce8-2eb023f3e24f.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562749-b5e26a00-c40f-11eb-91d9-641e254428c9.png" width="40" height="40"> |
 ## How to run tests
 **./gradlew runWebTests**
+###
 ![image](https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2)
 
 ## How to generate allure report
 **allure serve build/allure-results**
+###
 ![image](https://github.com/user-attachments/assets/3dc5ea49-22ca-4f7e-a4d9-0c0cc120e2d5)
 
 
