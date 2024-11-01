@@ -15,7 +15,9 @@
 
 ## Allure report
 
-![image](https://github.com/xt4k/HelsiLocalMobileTesting/assets/38681283/2ccdd811-d410-42fe-86bf-204b8e2c40b7)
+![image](https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950)
+
+
 
 ## :arrow_forward: screenshots
 
