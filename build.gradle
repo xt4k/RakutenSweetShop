@@ -125,3 +125,10 @@ task runLoginTests(type: Test) {
     }
     systemProperty 'srv', 'local'
 }
+
+task runLoginRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'positive'
+    }
+    systemProperty 'srv', 'remote'
+}

@@ -26,10 +26,8 @@ public class TestBase {
 
     @AfterEach
     public void addAttachments() {
-        String sessionId = getSessionId();
         AttachmentsHelper.attachScreenshot("Last screenshot");
         attachPageSource();
-        attachAsText("Browser console logs", getConsoleLogs(sessionId));
         closeWebDriver();
     }
 

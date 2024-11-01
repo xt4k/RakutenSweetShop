@@ -7,17 +7,11 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.codeborne.selenide.Selenide.getWebDriverLogs;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static java.lang.String.join;
-import static java.util.Optional.ofNullable;
-import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class DriverHelper {
 
@@ -25,16 +19,6 @@ public class DriverHelper {
         return ConfigFactory.newInstance().create(DriverConfig.class, System.getProperties());
     }
 
-    public static String getSessionId() {
-        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid", "");
-    }
-
-    public static String getConsoleLogs(String sessionId) {
-        String consoleLog;
-        String logType = ofNullable(getDriverConfig().browserLogType()).orElse(BROWSER);
-        consoleLog = join("\n", getWebDriverLogs(logType));
-        return consoleLog;
-    }
 
     @Step("WebDriver configuring")
     public static void configureDriver() {
@@ -55,11 +39,32 @@ public class DriverHelper {
             prefs.put("credentials_enable_service", false);
             prefs.put("profile.password_manager_enabled", false);
 
+
+            prefs.put("selenium_version", "4.23.0");
+            prefs.put("w3c", true);
+
             chromeOptions.setExperimentalOption("prefs", prefs);
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
+            if (getDriverConfig().webRemoteDriverUrl() != null && !getDriverConfig().webRemoteDriverUrl().isEmpty()) {
+                capabilities.setCapability("LT:Options", Map.of(
+                        "username", getDriverConfig().ltUserName(),
+                        "accessKey", getDriverConfig().accessKey(),
+                        "project", "Untitled",
+                        "build", "build-name",
+                        "name", "test-name"
+                ));
+
+                capabilities.setCapability("selenoid:options", Map.of("enableVNC", true, "enableVideo", true)); // Example options for Selenoid
+                capabilities.setCapability("browserName", getDriverConfig().webBrowser());
+                capabilities.setCapability("browserVersion", getDriverConfig().webBrowserVersion());
+                Configuration.remote = getDriverConfig().webRemoteDriverUrl();
+
+            }
         }
+
         Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl=getDriverConfig().baseUrl();
+        Configuration.baseUrl = getDriverConfig().baseUrl();
+        System.out.println();
     }
 }

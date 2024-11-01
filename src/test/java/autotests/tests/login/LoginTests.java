@@ -57,7 +57,7 @@ public class LoginTests extends TestBase {
     @Test
     @JiraIssues({@JiraIssue("AUTO-9513")})
     @TM4J("8521")
-    @Tag("positive")
+    @Tag("failed")
     @DisplayName("Testcase 6. Negative Login test. FAILED IN PURPOSE!")
     @Description("Testcase 6. Negative Login test. FAILED IN PURPOSE!")
     void loginUnHappyPath() {

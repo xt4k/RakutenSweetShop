@@ -34,11 +34,15 @@ public interface DriverConfig extends Config {
     @Key("video.storage")
     String videoStorage();
 
-    @Key("remote")
-    String remote();
-
     @Key("base.url")
     String baseUrl();
+
+    @Key("lt.user.name")
+    String ltUserName();
+
+    @Key("access.key")
+    String accessKey();
+
 
 
 }
