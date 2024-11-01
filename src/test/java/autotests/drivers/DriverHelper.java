@@ -42,8 +42,6 @@ public class DriverHelper {
             prefs.put("profile.default_content_setting_values.notifications", 2);
             prefs.put("credentials_enable_service", false);
             prefs.put("profile.password_manager_enabled", false);
-
-
             prefs.put("selenium_version", "4.23.0");
             prefs.put("w3c", true);
 
@@ -52,7 +50,7 @@ public class DriverHelper {
 
             if (getDriverConfig().webRemoteDriverUrl() != null && !getDriverConfig().webRemoteDriverUrl().isEmpty()) {
                 capabilities.setCapability("LT:Options", Map.of(
-                        "username", System.getenv("LT_ACCESS_KEY"),// getDriverConfig().ltUserName(),
+                        "username", System.getenv("LT_USERNAME"),// getDriverConfig().ltUserName(),
                         "accessKey", System.getenv("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
                         "project", "Untitled",
                         "build", "build-name",
@@ -69,7 +67,7 @@ public class DriverHelper {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = getDriverConfig().baseUrl();
-        LOG.warn("system emv secret "+ System.getenv("LT_ACCESS_KEY"));
-        LOG.warn("LT_UN: " + getDriverConfig().ltUserName());
+        LOG.warn("system emv secret LT_USERNAME "+ System.getenv("LT_USERNAME"));
+        LOG.warn("LT_USERNAME getconfig: " + getDriverConfig().ltUserName());
     }
 }
