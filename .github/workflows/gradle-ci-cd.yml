@@ -94,5 +94,5 @@ jobs:
           USERNAME: ${{ secrets.PROD_USERNAME }}
           PASSWORD: ${{ secrets.PROD_PASSWORD }}
         run: |
-          echo "Deploying to Production environment"
+          echo "Deploying to Production environment!"
           # Add deployment commands for Production here

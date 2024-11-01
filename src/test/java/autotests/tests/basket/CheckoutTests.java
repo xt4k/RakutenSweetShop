@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Story("Checkout page tests")
 @Tags({@Tag("web"), @Tag("Sweet_Shop")})
 @Owner("xt4k")
-@JiraIssues({@JiraIssue("AUTO-186")})
+@JiraIssues({@JiraIssue("AUTO-1572")})
 @DisplayName("Test set for checkout page.")
 @Layer("UI")
 @Issue("6978")
