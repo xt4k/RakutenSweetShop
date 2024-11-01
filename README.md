@@ -14,7 +14,7 @@
 ## How to run tests
 **./gradlew runWebTests**
 ###
-![image](https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2)
+![image](https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2  width="40" height="40")
 
 ## How to generate allure report
 **allure serve build/allure-results**
