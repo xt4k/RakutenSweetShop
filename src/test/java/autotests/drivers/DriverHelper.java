@@ -48,14 +48,17 @@ public class DriverHelper {
             chromeOptions.setExperimentalOption("prefs", prefs);
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
+            LOG.warn("system emv  LT_USERNAME "+ System.getProperty("LT_USERNAME"));
+            // LOG.warn("system eтv  LT_ACCESS_KEY "+ System.getProperty(""));
+
             if (getDriverConfig().webRemoteDriverUrl() != null && !getDriverConfig().webRemoteDriverUrl().isEmpty()) {
-                capabilities.setCapability("LT:Options", Map.of(
-                        "username", System.getenv("LT_USERNAME"),// getDriverConfig().ltUserName(),
-                        "accessKey", System.getenv("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
+                Map ltMap = Map.of(
+                        "username", System.getProperty("LT_USERNAME"),// getDriverConfig().ltUserName(),
+                        "accessKey", System.getProperty("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
                         "project", "Untitled",
                         "build", "build-name",
-                        "name", "test-name"
-                ));
+                        "name", "test-name");
+                capabilities.setCapability("LT:Options", ltMap);
 
                 capabilities.setCapability("selenoid:options", Map.of("enableVNC", true, "enableVideo", true)); // Example options for Selenoid
                 capabilities.setCapability("browserName", getDriverConfig().webBrowser());
