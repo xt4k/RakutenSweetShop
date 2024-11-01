@@ -161,7 +161,7 @@ fi
 
 # Collect all arguments for the java command, stacking in reverse order:
 #   * args from the command line
-#   * the e2e class name
+#   * the main class name
 #   * -classpath
 #   * -D...appname settings
 #   * --module-path (only if needed)
