@@ -112,6 +112,13 @@ task runWebTests(type: Test) {
     systemProperty 'srv', 'local'
 }
 
+task runWebRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'web'
+    }
+    systemProperty 'srv', 'remote'
+}
+
 task runLoginTests(type: Test) {
     useJUnitPlatform {
         includeTags 'login'
