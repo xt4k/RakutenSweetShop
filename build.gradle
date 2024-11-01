@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-    id 'io.qameta.allure' version '2.10.0'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
 compileJava.options.encoding = 'UTF-8'
@@ -14,20 +14,20 @@ repositories {
 }
 
 ext {
-    allureVersion = "2.23.0"
-    appiumVersion = "8.5.1"//"7.5.1"//
-    aspectjVersion = "1.9.19"
-    assertjVersion = "3.24.2"
+    allureVersion = "2.29.0"
+    aspectjVersion = "1.9.22.1"
+    assertjVersion = "3.26.3"
 
-    jacksonVersion = "2.15.2"
-    junitVersion = "5.9.3"
+    jacksonVersion = "2.17.2"
+    junitVersion = "5.11.3"
 
-    logbackVersion = "1.4.8"
-    selenideVersion = "6.15.0"
+    logbackVersion = "1.5.11"
+    selenideVersion = "7.5.1"
     ownerVersion = "1.0.12"
     restAssuredVersion = "5.3.0"
-    slf4jVersion = "2.0.7"
-
+    slf4jVersion = "2.0.16"
+    lombokVersion = "1.18.34"
+    fakerVersion = "1.0.2"
 }
 
 
@@ -47,29 +47,30 @@ allure {
 
 dependencies {
     implementation("ch.qos.logback:logback-core:${logbackVersion}")
-    //    'com.codeborne:selenide-appium:6.15.0')
+
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+    runtimeOnly "org.aspectj:aspectjweaver:${aspectjVersion}"
+
     testImplementation(
             "org.slf4j:slf4j-api:${slf4jVersion}",
             "ch.qos.logback:logback-classic:${logbackVersion}",
-
-            "io.rest-assured:rest-assured:${restAssuredVersion}",
+            "org.projectlombok:lombok:${lombokVersion}",
+            "com.github.javafaker:javafaker:${fakerVersion}",
 
             "commons-io:commons-io:2.11.0",
-
             "org.assertj:assertj-core:${assertjVersion}",
 
             "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}",
             "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
             "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}",
-
             "org.aspectj:aspectjweaver:${aspectjVersion}",
             "com.codeborne:selenide:${selenideVersion}",
-
-            "io.qameta.allure:allure-rest-assured:${allureVersion}",
             "io.qameta.allure:allure-java-commons:${allureVersion}",
             "io.qameta.allure:allure-selenide:${allureVersion}",
 
-            "io.appium:java-client:${appiumVersion}",
             "org.aeonbits.owner:owner:${ownerVersion}",
             "org.junit.jupiter:junit-jupiter-params:${junitVersion}",
             "org.junit.jupiter:junit-jupiter-api:${junitVersion}")
@@ -87,22 +88,33 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
+    systemProperty 'srv', 'local'
 }
 
-task runSearchTests(type: Test) {
+task runBasketTests(type: Test) {
     useJUnitPlatform {
-        includeTags 'android'
+        includeTags 'basket'
     }
+    systemProperty 'srv', 'local'
 }
 
-task runSearchTests2(type: Test) {
+task runCheckoutTests(type: Test) {
     useJUnitPlatform {
-        includeTags 'android'
+        includeTags 'checkout'
     }
+    systemProperty 'srv', 'local'
 }
 
-task runAnnaPhoneTest(type: Test) {
+task runWebTests(type: Test) {
     useJUnitPlatform {
-        includeTags 'anna'
+        includeTags 'web'
     }
+    systemProperty 'srv', 'local'
+}
+
+task runLoginTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'login'
+    }
+    systemProperty 'srv', 'local'
 }
