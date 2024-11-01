@@ -48,12 +48,12 @@ public class DriverHelper {
             chromeOptions.setExperimentalOption("prefs", prefs);
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
-            LOG.warn("system emv  LT_USERNAME "+ System.getProperty("LT_USERNAME"));
+            LOG.warn("system prop  LT_USERNAME " + System.getProperty("LT_USERNAME"));
+            LOG.warn("system env  LT_USERNAME " + System.getenv("LT_USERNAME"));
             // LOG.warn("system eтv  LT_ACCESS_KEY "+ System.getProperty(""));
 
-            if (getDriverConfig().webRemoteDriverUrl() != null && !getDriverConfig().webRemoteDriverUrl().isEmpty()) {
-                Map ltMap = Map.of(
-                        "username", System.getProperty("LT_USERNAME"),// getDriverConfig().ltUserName(),
+            if (!getDriverConfig().webRemoteDriverUrl().isBlank()) {
+                Map ltMap = Map.of("username", System.getProperty("LT_USERNAME"),// getDriverConfig().ltUserName(),
                         "accessKey", System.getProperty("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
                         "project", "Untitled",
                         "build", "build-name",
@@ -70,7 +70,8 @@ public class DriverHelper {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = getDriverConfig().baseUrl();
-        LOG.warn("system emv secret LT_USERNAME "+ System.getenv("LT_USERNAME"));
+        LOG.warn(":::Configuration.baseUrl::: " + Configuration.baseUrl);
+        LOG.warn("system emv secret LT_USERNAME " + System.getenv("LT_USERNAME"));
         LOG.warn("LT_USERNAME getconfig: " + getDriverConfig().ltUserName());
     }
 }

@@ -33,7 +33,7 @@ jobs:
         env:
           LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
           LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
-        run: ./gradlew runWebRemoteTests
+        run: ./gradlew runLoginRemoteTests -DLT_USERNAME="$LT_USERNAME" -DLT_ACCESS_KEY="$LT_ACCESS_KEY"
 
       - name: Deploy to QA
         env:
