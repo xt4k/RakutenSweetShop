@@ -1,5 +1,6 @@
 package autotests.po;
 
+import autotests.helpers.AttachmentsHelper;
 import autotests.pojo.BillingForm;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -47,6 +48,7 @@ public class BillingFormWidget extends BasePage {
         inputCreditCardNumber.setValue(bf.getCreditCardNumber());
         inputExpiration.setValue(bf.getExpiration());
         inputCvv.setValue(bf.getCvv());
+        AttachmentsHelper.attachScreenshot("Before `continue to checkout` push");
 
         btnCheckout.click();
     }

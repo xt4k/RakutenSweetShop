@@ -25,7 +25,7 @@ public class LoginPage extends BasePage {
         return new LoginPage();
     }
 
-    @Step("Set email field")
+    @Step("Set password field")
     public LoginPage setPassword(String password) {
         inputPassword.setValue(password);
         return new LoginPage();

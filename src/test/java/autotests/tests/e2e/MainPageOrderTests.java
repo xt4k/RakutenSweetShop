@@ -100,11 +100,14 @@ public class MainPageOrderTests extends TestBase {
                 .goToBasket();
 
         SoftAssertions.assertSoftly(softly -> {
-            softly.assertThat(Double.parseDouble(basketPage.getTotalSumValue()))
-                    .as("Total sum expected `{}` should be equal to actual:`{}`.", totalSum, basketPage.getTotalSumValue())
+            Double actualSum = Double.parseDouble(basketPage.getTotalSumValue());
+            String actualCurrency = basketPage.getBasketCurrency();
+
+            softly.assertThat(actualSum)
+                    .as("Total sum expected `{}` should be equal to actual:`{}`.", totalSum, actualSum)
                     .isEqualTo(totalSum);
-            softly.assertThat(basketPage.getBasketCurrency())
-                    .as("Basket currency expected `{}` should be equal to actual:`{}`.", bo.getCurrency(), basketPage.getTotalSumValue())
+            softly.assertThat(actualCurrency)
+                    .as("Basket currency expected `{}` should be equal to actual:`{}`.", bo.getCurrency(), actualCurrency)
                     .contains(bo.getCurrency());
         });
     }
