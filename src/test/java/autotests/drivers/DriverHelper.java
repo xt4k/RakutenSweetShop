@@ -50,11 +50,15 @@ public class DriverHelper {
 
             LOG.warn("system prop  LT_USERNAME " + System.getProperty("LT_USERNAME"));
             LOG.warn("system env  LT_USERNAME " + System.getenv("LT_USERNAME"));
+            LOG.warn("====================================================================================");
+            LOG.warn("system env  LT_USERNAME " + System.getenv("ABC_DE"));
+            LOG.warn("system env  LT_USERNAME " + System.getProperty("ABC_DE"));
+            LOG.warn("====================================================================================");
             // LOG.warn("system eтv  LT_ACCESS_KEY "+ System.getProperty(""));
 
             if (!getDriverConfig().webRemoteDriverUrl().isBlank()) {
-                Map ltMap = Map.of("username", System.getProperty("LT_USERNAME"),// getDriverConfig().ltUserName(),
-                        "accessKey", System.getProperty("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
+                Map ltMap = Map.of("username", System.getenv("LT_USERNAME"),// getDriverConfig().ltUserName(),
+                        "accessKey", System.getenv("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
                         "project", "Untitled",
                         "build", "build-name",
                         "name", "test-name");
