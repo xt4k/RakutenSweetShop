@@ -31,8 +31,6 @@
 
 ### 2. Test the total price in GBP is correct i.e., matches the price of individual items based on quantity.
 ![image](https://github.com/user-attachments/assets/1bc13509-164c-41d2-9a25-e4d1df627ff2)
-![image](https://github.com/user-attachments/assets/ff70c945-d352-49ae-bd5a-9ca7118ae47b)
-
 
 ### 3. Change the delivery type to Standard Shipping and verify the total price.
 ![image](https://github.com/user-attachments/assets/87171963-64eb-4fde-8606-b014245e6803)
