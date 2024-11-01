@@ -48,8 +48,8 @@ public class DriverHelper {
 
             if (getDriverConfig().webRemoteDriverUrl() != null && !getDriverConfig().webRemoteDriverUrl().isEmpty()) {
                 capabilities.setCapability("LT:Options", Map.of(
-                        "username", getDriverConfig().ltUserName(),
-                        "accessKey", getDriverConfig().accessKey(),
+                        "username", System.getenv("LT_ACCESS_KEY"),// getDriverConfig().ltUserName(),
+                        "accessKey", System.getenv("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
                         "project", "Untitled",
                         "build", "build-name",
                         "name", "test-name"
@@ -65,6 +65,6 @@ public class DriverHelper {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = getDriverConfig().baseUrl();
-        System.out.println();
+        System.out.println("LT_UN: " + getDriverConfig().ltUserName());
     }
 }
