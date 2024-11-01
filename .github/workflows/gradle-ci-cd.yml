@@ -59,7 +59,10 @@ jobs:
         run: ./gradlew clean build
 
       - name: Run tests
-        run: ./gradlew test
+        env:
+          LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
+          LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
+        run: ./gradlew runWebRemoteTests
 
       - name: Deploy to Preprod
         env:
