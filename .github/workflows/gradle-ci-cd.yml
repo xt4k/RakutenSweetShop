@@ -37,76 +37,89 @@ jobs:
           LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
         run: ./gradlew runWebRemoteTests
         continue-on-error: true
+
+      - name: Install Allure
+        run: |
+            sudo apt-get update
+            sudo apt-get install -y unzip
+            wget https://github.com/allure-framework/allure2/releases/download/2.13.8/allure-2.13.8.zip
+            unzip allure-2.13.8.zip -d /opt/
+            sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
+
       - name: Generate Allure Report
         run: |
           allure generate ./build/allure-results --clean -o ./build/allure-report
-          allure open ./build/allure-report
+        #  allure open ./build/allure-report
+        if: always()  # Ensures the report generation step runs regardless of test outcome
+
+
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: ./build/allure-report
+        if: always()  # Ensures upload of the report regardless of the previous steps
 
-  # Job for Preprod Environment
-  build-and-test-preprod:
-    if: github.ref == 'refs/heads/preprod'
-    runs-on: ubuntu-latest
-    environment: ppd
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Build with Gradle
-        run: ./gradlew clean build
-
-      - name: Run tests
-        env:
-          LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
-          LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
-        run: ./gradlew runWebRemoteTests
-
-      - name: Deploy to Preprod
-        env:
-          SERVER_URL: ${{ secrets.PREPROD_SERVER_URL }}
-          USERNAME: ${{ secrets.PREPROD_USERNAME }}
-          PASSWORD: ${{ secrets.PREPROD_PASSWORD }}
-        run: |
-          echo "Deploying to Preprod environment"
-          # Add deployment commands for Preprod here
-
-  # Job for Production Environment
-  deploy-prod:
-    if: github.ref == 'refs/heads/prod'
-    runs-on: ubuntu-latest
-    needs: [build-and-test-qa, build-and-test-preprod]
-    environment: prod
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Build with Gradle
-        run: ./gradlew clean build
-
-      - name: Run tests
-        run: ./gradlew runWebTests
-
-      - name: Deploy to Production
-        env:
-          SERVER_URL: ${{ secrets.PROD_SERVER_URL }}
-          USERNAME: ${{ secrets.PROD_USERNAME }}
-          PASSWORD: ${{ secrets.PROD_PASSWORD }}
-        run: |
-          echo "Deploying to Production environment!"
-          # Add deployment commands for Production here
+#  # Job for Preprod Environment
+#  build-and-test-preprod:
+#    if: github.ref == 'refs/heads/preprod'
+#    runs-on: ubuntu-latest
+#    environment: ppd
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#
+#      - name: Set up JDK
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'temurin'
+#          java-version: '17'
+#
+#      - name: Build with Gradle
+#        run: ./gradlew clean build
+#
+#      - name: Run tests
+#        env:
+#          LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
+#          LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
+#        run: ./gradlew runWebRemoteTests
+#
+#      - name: Deploy to Preprod
+#        env:
+#          SERVER_URL: ${{ secrets.PREPROD_SERVER_URL }}
+#          USERNAME: ${{ secrets.PREPROD_USERNAME }}
+#          PASSWORD: ${{ secrets.PREPROD_PASSWORD }}
+#        run: |
+#          echo "Deploying to Preprod environment"
+#          # Add deployment commands for Preprod here
+#
+#  # Job for Production Environment
+#  deploy-prod:
+#    if: github.ref == 'refs/heads/prod'
+#    runs-on: ubuntu-latest
+#    needs: [build-and-test-qa, build-and-test-preprod]
+#    environment: prod
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#
+#      - name: Set up JDK
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'temurin'
+#          java-version: '17'
+#
+#      - name: Build with Gradle
+#        run: ./gradlew clean build
+#
+#      - name: Run tests
+#        run: ./gradlew runWebTests
+#
+#      - name: Deploy to Production
+#        env:
+#          SERVER_URL: ${{ secrets.PROD_SERVER_URL }}
+#          USERNAME: ${{ secrets.PROD_USERNAME }}
+#          PASSWORD: ${{ secrets.PROD_PASSWORD }}
+#        run: |
+#          echo "Deploying to Production environment!"
+#          # Add deployment commands for Production here
