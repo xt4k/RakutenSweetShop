@@ -64,7 +64,7 @@ public class DriverHelper {
                         "name", "test-name");
                 capabilities.setCapability("LT:Options", ltMap);
 
-                capabilities.setCapability("selenoid:options", Map.of("enableVNC", true, "enableVideo", true)); // Example options for Selenoid
+                capabilities.setCapability("selenoid:options", Map.of("enableVNC", true, "enableVideo", true));
                 capabilities.setCapability("browserName", getDriverConfig().webBrowser());
                 capabilities.setCapability("browserVersion", getDriverConfig().webBrowserVersion());
                 Configuration.remote = getDriverConfig().webRemoteDriverUrl();

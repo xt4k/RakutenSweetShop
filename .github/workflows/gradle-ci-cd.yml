@@ -41,19 +41,20 @@ jobs:
         run: ./gradlew runWebRemoteTests
         continue-on-error: true
 
-      - name: Install Allure
+      - name: Install Allure CLI
         run: |
-            sudo apt-get update
-            sudo apt-get install -y unzip
-            wget https://github.com/allure-framework/allure2/releases/download/2.13.8/allure-2.13.8.zip
-            unzip allure-2.13.8.zip -d /opt/
-            sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
+          curl -sL https://github.com/allure-framework/allure2/releases/download/2.20.1/allure-2.20.1.tgz | tar -xz
+          sudo mv allure-2.20.1 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+
+      - name: Verify Allure CLI version
+        run: allure --version
 
       - name: Generate Allure Report
         run: |
           allure generate ./build/allure-results --clean -o ./build/allure-report
         #  allure open ./build/allure-report
-        if: always()  # Ensures the report generation step runs regardless of test outcome
+        #if: always()  # Ensures the report generation step runs regardless of test outcome
 
 
       - name: Upload Allure Report
