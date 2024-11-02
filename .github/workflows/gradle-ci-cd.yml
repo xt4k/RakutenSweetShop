@@ -30,6 +30,9 @@ jobs:
       - name: CLean with Gradle
         run: ./gradlew clean
 
+      - name: Clean allure results directory
+        run: rm -rf ./build/allure-results/*
+
       - name: Run tests
         env:
           ABC_DE: ${{ secrets.ABC_DE }}
