@@ -62,7 +62,13 @@ jobs:
         with:
           name: allure-report
           path: ./build/allure-report
-        if: always()  # Ensures upload of the report regardless of the previous steps
+       # if: always()  # Ensures upload of the report regardless of the previous steps
+
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/allure-report
 
 #  # Job for Preprod Environment
 #  build-and-test-preprod:
