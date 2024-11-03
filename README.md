@@ -73,7 +73,7 @@
 
 ### Testsuites
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950" width="200" height="100">   
+    <img src="https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950" width="300" height="200">   
 </p>
 
 
