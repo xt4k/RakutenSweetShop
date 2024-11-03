@@ -25,8 +25,13 @@
 #### Defined different testsuite content, job sequence, and environments.
 #### After test run completion testrun result is archived and published. Also generated testrun Allure report
 ##### (Known GA limitation that only last Allure report is accessible).  
+#### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
 #### Here is some screenshots:
+##### QA pipeline sequence - 
 
+##### Preprod pipeline sequence -
+
+##### Prod pipeline sequence -
 
 
 
