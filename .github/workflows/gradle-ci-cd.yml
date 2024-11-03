@@ -54,7 +54,7 @@ jobs:
       - name: Upload QA environment Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-qa
           path: ./build/allure-report
 
       - name: Deploy QA environment Allure Report to GitHub Pages
@@ -108,7 +108,7 @@ jobs:
       - name: Upload Preprod environment Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-preprod
           path: ./build/allure-report
 
       - name: Deploy Preprod environment Allure Report to GitHub Pages
@@ -162,7 +162,7 @@ jobs:
       - name: Upload Prod environment Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-prod
           path: ./build/allure-report
 
       - name: Deploy Prod environment Allure Report to GitHub Pages
