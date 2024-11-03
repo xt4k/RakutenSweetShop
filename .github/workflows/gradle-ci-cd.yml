@@ -54,7 +54,7 @@ jobs:
       - name: Upload QA environment Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-qa
           path: ./build/allure-report
 
       - name: Deploy QA environment Allure Report to GitHub Pages
@@ -109,7 +109,7 @@ jobs:
       - name: Upload Preprod environment Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-preprod
           path: ./build/allure-report
 
       - name: Deploy Preprod environment Allure Report to GitHub Pages
@@ -147,13 +147,13 @@ jobs:
         run: ./gradlew clean runProdRemoteTests
         continue-on-error: true
 
-      - name: Install Allure CLI
+      - name: Install Allure CLI to prod
         run: |
           curl -sL https://github.com/allure-framework/allure2/releases/download/2.20.1/allure-2.20.1.tgz | tar -xz
           sudo mv allure-2.20.1 /opt/allure
           sudo ln -s /opt/allure/bin/allure /usr/bin/allure
 
-      - name: Verify Allure CLI version
+      - name: Verify prod Allure CLI version
         run: allure --version
 
       - name: Generate Allure Report for Prod environment test run
@@ -163,7 +163,7 @@ jobs:
       - name: Upload Prod environment Allure Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-prod
           path: ./build/allure-report
 
       - name: Deploy Prod environment Allure Report to GitHub Pages
