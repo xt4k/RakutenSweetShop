@@ -67,11 +67,7 @@ public class DriverHelper {
 
             }
         }
-
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = getDriverConfig().baseUrl();
-        LOG.warn(":::Configuration.baseUrl::: " + Configuration.baseUrl);
-        LOG.warn("system emv secret LT_USERNAME " + getenv("LT_USERNAME"));
-        LOG.warn("LT_USERNAME getconfig: " + getDriverConfig().ltUserName());
     }
 }
