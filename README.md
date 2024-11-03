@@ -26,12 +26,12 @@
 
 ### 2. Github Actions pipeline:
 #### CI-CD pipeline placed in .github/workflows folder as gradle-ci-cd.yml file. 
-#### It contain steps that should be done after pushes for every of tracked branches (qa, preprod, prod) on defined Env.
-#### Defined different testsuite content, job sequence, and environments.
-#### After test run completion testrun result is archived and published. Also generated testrun Allure report
-##### (Known GA limitation that only last Allure report is accessible).  
-#### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
-#### Here is some screenshots:
+##### It contain steps that should be done after pushes for every of tracked branches (qa, preprod, prod) on defined Env.
+##### Defined different testsuite content, job sequence, and environments.
+##### After test run completion testrun result is archived and published. Also generated testrun Allure report
+###### (Known GA limitation that only last Allure report is accessible).  
+##### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
+#### Pipeline screenshots:
 ### QA pipeline sequence - 
 <p align="left">
     <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="200" height="100">
