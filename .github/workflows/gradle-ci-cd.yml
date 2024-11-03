@@ -120,7 +120,7 @@ jobs:
 
   deploy-prod:
     name: Prod environment pipeline
-    if: github.ref == 'refs/heads/preprod'
+    if: github.ref == 'refs/heads/prod'
     runs-on: ubuntu-latest
     needs: [run-auto-test-ppd]
     environment: prod
