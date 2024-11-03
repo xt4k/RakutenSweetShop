@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Feature("Web tests")
 @Story("E2E functionality")
-@Tags({@Tag("web"), @Tag("Sweet_Shop")})
+@Tags({@Tag("web"), @Tag("Sweet_Shop"), @Tag("main")})
 @Owner("xt4k")
 @Tag("basket")
 @JiraIssues({@JiraIssue("AUTO-1287")})

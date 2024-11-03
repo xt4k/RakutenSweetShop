@@ -140,3 +140,20 @@ task runLoginLocalTest(type: Test) {
     systemProperty 'srv', 'local_run_remote'
     //systemProperty 'ABCDE', System.getProperty('ABCDE', 'default_value_in_grADLE_TASK')
 }
+
+task runPpdRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'main',"login","checkout"
+
+        excludeTags 'failed'
+    }
+    systemProperty 'srv', 'remote'
+}
+
+task runProdRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'main',"checkout"
+        excludeTags 'failed'
+    }
+    systemProperty 'srv', 'remote'
+}

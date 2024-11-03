@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 
 @Feature("Web tests")
 @Story("Login page tests")
-@Tags({@Tag("web"), @Tag("Sweet_Shop")})
+@Tags({@Tag("web"), @Tag("Sweet_Shop"), @Tag("login")})
 @Owner("other guy")
 @JiraIssues({@JiraIssue("AUTO-865")})
 @DisplayName("Test set for Login page.")

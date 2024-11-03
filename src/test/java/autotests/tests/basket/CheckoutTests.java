@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Feature("Web tests")
 @Story("Checkout page tests")
-@Tags({@Tag("web"), @Tag("Sweet_Shop")})
+@Tags({@Tag("web"), @Tag("Sweet_Shop"),@Tag("checkout")})
 @Owner("xt4k")
 @JiraIssues({@JiraIssue("AUTO-1572")})
 @DisplayName("Test set for checkout page.")
