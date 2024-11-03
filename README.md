@@ -8,30 +8,42 @@
 
 ## Technology stack
 
-| GitHub                                                                                 |                                                                   IDEA                                                                   |                                                                   Java                                                                   |                                                                  Junit5                                                                  |                                                                  Gradle                                                                  |                                                                 Selenide                                                                 |                                                                  Allure                                                                  |                                                                                                      
+| GitHub / Github Action                                                                 |                                                                   IDEA                                                                   |                                                                   Java                                                                   |                                                                  Junit5                                                                  |                                                                  Gradle                                                                  |                                                                 Selenide                                                                 |                                                                  Allure                                                                  |                                                                                                      
 |:---------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
 | <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120561799-e88b6300-c40d-11eb-91ba-d4103ef6d4b5.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120561837-f7721580-c40d-11eb-8590-7b3b0b5eb50d.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562013-43bd5580-c40e-11eb-926f-1b8d3dc9e965.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562398-fbeafe00-c40e-11eb-9fe7-3a641bf7115c.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562458-1c1abd00-c40f-11eb-8ce8-2eb023f3e24f.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562749-b5e26a00-c40f-11eb-91d9-641e254428c9.png" width="40" height="40"> |
 
 ## How to:
-### 1. Run tests
+### 1. Run tests locally
 
 **./gradlew runWebTests**
 
 ###
 
+### 2. Github Actions pipeline:
+#### CI-CD pipeline placed in .github/workflows folder as gradle-ci-cd.yml file. 
+#### It contain steps that should be done after pushes for every of tracked branches (qa, preprod, prod) on defined Env.
+#### Defined different testsuite content, job sequence, and environments.
+#### After test run completion testrun result is archived and published. Also generated testrun Allure report
+##### (Known GA limitation that only last Allure report is accessible).  
+#### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
+#### Here is some screenshots:
+##### QA pipeline sequence - 
+
+##### Preprod pipeline sequence -
+
+##### Prod pipeline sequence -
+
+
+
 ![image](https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2)
 
 ###
 
-### 2. generate allure report
+### 2. generate local allure report
 
 **allure serve build/allure-results**
 
 ###
-
-### 3. generate allure report
-
-**allure serve build/allure-results**
 
 ###
 
