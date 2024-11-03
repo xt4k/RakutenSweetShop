@@ -144,7 +144,6 @@ task runLoginLocalTest(type: Test) {
 task runPpdRemoteTests(type: Test) {
     useJUnitPlatform {
         includeTags 'main',"login","checkout"
-
         excludeTags 'failed'
     }
     systemProperty 'srv', 'remote'
@@ -153,7 +152,6 @@ task runPpdRemoteTests(type: Test) {
 task runProdRemoteTests(type: Test) {
     useJUnitPlatform {
         includeTags 'main',"checkout"
-        excludeTags 'failed'
     }
     systemProperty 'srv', 'remote'
 }
