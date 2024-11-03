@@ -72,6 +72,10 @@
 
 
 ### Testsuites
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950" width="200" height="100">   
+</p>
+
 
 ![image](https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950)
 
@@ -97,16 +101,3 @@
 |:----------------------:|:---------:|
 | <img src="https://github.com/user-attachments/assets/2776be5a-6655-4058-87b1-d69cdf3e83fb" width="200" height="100"></div>  <img src="https://github.com/user-attachments/assets/a7ba7f0c-e9d8-4e27-a8ef-0af1502234de" width="200" height="100"> <img src="https://github.com/user-attachments/assets/780ba6ee-9342-4747-928f-c7714ce942a3" width="200" height="100">  | <img src="https://github.com/user-attachments/assets/73c48c18-7a1a-45b5-b90e-6da89f917a99" width="200" height="100"> |
 
-### 4. Fill the details and click on checkout.
-
-![image](https://github.com/user-attachments/assets/2776be5a-6655-4058-87b1-d69cdf3e83fb)
-![image](https://github.com/user-attachments/assets/a7ba7f0c-e9d8-4e27-a8ef-0af1502234de)
-![image](https://github.com/user-attachments/assets/780ba6ee-9342-4747-928f-c7714ce942a3)
-
-###
-
-### 5. Login to account
-
-![image](https://github.com/user-attachments/assets/73c48c18-7a1a-45b5-b90e-6da89f917a99)
-
-###
