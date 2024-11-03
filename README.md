@@ -16,6 +16,7 @@
 ### 1. Run tests locally
 
 **./gradlew runWebTests**
+<p align="left"> <img src="https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2" width="200" height="100"></p>
 
 ###
 
@@ -45,18 +46,16 @@
 
 ##### Preprod pipeline sequence -
 <p align="left">
-    <img src="https://github.com/user-attachments/assets/bc42ffa0-1e88-48d4-9f00-9966ee6ff573" width="170" height="90">
-    <img src="https://github.com/user-attachments/assets/15750577-7b05-4465-bf8e-0bcd7d1479ea" width="170" height="90">
-    <img src="https://github.com/user-attachments/assets/5ec0d7bd-6780-4ed6-8a50-fd919e4e9b20" width="170" height="90">
-    <img src="https://github.com/user-attachments/assets/12bad319-b8ae-4d1e-85d7-f44ed271931a" width="170" height="90">
-    <img src="https://github.com/user-attachments/assets/d46a0826-2d52-4100-9ed2-d089d0763b51" width="170" height="90">
+    <img src="https://github.com/user-attachments/assets/bc42ffa0-1e88-48d4-9f00-9966ee6ff573" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/15750577-7b05-4465-bf8e-0bcd7d1479ea" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/5ec0d7bd-6780-4ed6-8a50-fd919e4e9b20" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/12bad319-b8ae-4d1e-85d7-f44ed271931a" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/d46a0826-2d52-4100-9ed2-d089d0763b51" width="160" height="90">
 </p>
 
 ##### Prod pipeline sequence -
 
 
-
-![image](https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2)
 
 ###
 
