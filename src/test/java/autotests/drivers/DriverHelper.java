@@ -50,18 +50,13 @@ public class DriverHelper {
             chromeOptions.setExperimentalOption("prefs", prefs);
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
-            LOG.warn("====================================================================================");
-            LOG.warn("getDriverConfig  LT_USERNAME " + getDriverConfig().ltUserName2() +" size = "+getDriverConfig().ltUserName2().length());
-            LOG.warn("Environment variable LT_USERNAME: " + System.getenv("LT_USERNAME")+" size = "+System.getenv("LT_USERNAME").length());
-            LOG.warn("====================================================================================");
-
             if (!getDriverConfig().webRemoteDriverUrl().isBlank()) {
                 Map ltMap = Map.of(
                         "project", "Untitled",
                         "build", "build-name",
                         "name", "test-name",
-                        "username", getDriverConfig().ltUserName2(),
-                        "accessKey", getDriverConfig().accessKey2()
+                        "username", getenv("LT_USERNAME"),
+                        "accessKey", getenv("LT_ACCESS_KEY")
                 );
                 capabilities.setCapability("LT:Options", ltMap);
 
