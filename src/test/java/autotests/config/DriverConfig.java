@@ -49,9 +49,9 @@ public interface DriverConfig extends Config {
     //@DefaultValue("default_in_config")
     String webAbcde();
 
-    @Key("${env:LT_USERNAME}")
+    @Key("${LT_USERNAME}")
     String ltUserName2();
 
-    @Key("${env:LT_ACCESS_KEY}")
+    @Key("${LT_ACCESS_KEY}")
     String accessKey2();
 }
