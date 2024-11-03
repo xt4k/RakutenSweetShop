@@ -61,18 +61,15 @@
     <img src="https://github.com/user-attachments/assets/fd7a1db3-5616-4a79-bd1a-2f755dcee260" width="160" height="90">
     <img src="https://github.com/user-attachments/assets/3e1488b6-34c3-46da-a456-85047e5d3f5f" width="160" height="90">  
 </p>
-###
-
 
 ## Allure report
-
 ### Common report info
 ### Testsuites
 <p align="center">
     <img src="https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950" width="300" height="200">   
 </p>
 
-### Passed tests (with last screen screenshot)
+### Passed tests with last screenshot:
 |  1. All the selected items are present in basket |  2. Test the total price in GBP is correct the price of individual items based on quantity match | 3. Change the delivery type to Standard Shipping and verify the total price |  
 |:----------------------:|:---------:|:------------:|
 |<div align="center"> <img src="https://github.com/user-attachments/assets/80d09586-308e-4b2e-8ac2-62a41706dad7" width="200" height="100"></div> | <img src="https://github.com/user-attachments/assets/1bc13509-164c-41d2-9a25-e4d1df627ff2" width="200" height="100"> | <img src="https://github.com/user-attachments/assets/87171963-64eb-4fde-8606-b014245e6803" width="200" height="100"> |
