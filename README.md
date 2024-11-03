@@ -14,15 +14,13 @@
 
 ## How to:
 ### 1. Run tests locally
-
 **./gradlew runWebTests**
 <p align="left"> <img src="https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2" width="200" height="100"></p>
 ###
-### 2. Пenerate local allure report
+### 2. Generate local allure report
 **allure serve build/allure-results**
-###
 <p align="left"> <img src="https://github.com/user-attachments/assets/3dc5ea49-22ca-4f7e-a4d9-0c0cc120e2d5" width="200" height="100"></p>
-###
+
 
 ### 2. Github Actions pipeline:
 #### CI-CD pipeline placed in .github/workflows folder as gradle-ci-cd.yml file. 
@@ -74,18 +72,16 @@
     <img src="https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950" width="300" height="200">   
 </p>
 
-### Positive tests (with last screen screenshot)
+### Passed tests (with last screen screenshot)
 |  1. All the selected items are present in basket |  2. Test the total price in GBP is correct the price of individual items based on quantity match | 3. Change the delivery type to Standard Shipping and verify the total price |  
 |:----------------------:|:---------:|:------------:|
 |<div align="center"> <img src="https://github.com/user-attachments/assets/80d09586-308e-4b2e-8ac2-62a41706dad7" width="200" height="100"></div> | <img src="https://github.com/user-attachments/assets/1bc13509-164c-41d2-9a25-e4d1df627ff2" width="200" height="100"> | <img src="https://github.com/user-attachments/assets/87171963-64eb-4fde-8606-b014245e6803" width="200" height="100"> |
-
 
 |  4. Fill the details and click on checkout. |  5. Login to account |  
 |:----------------------:|:---------:|
 | <img src="https://github.com/user-attachments/assets/2776be5a-6655-4058-87b1-d69cdf3e83fb" width="200" height="100"></div>  <img src="https://github.com/user-attachments/assets/a7ba7f0c-e9d8-4e27-a8ef-0af1502234de" width="200" height="100"> <img src="https://github.com/user-attachments/assets/780ba6ee-9342-4747-928f-c7714ce942a3" width="200" height="100">  | <img src="https://github.com/user-attachments/assets/73c48c18-7a1a-45b5-b90e-6da89f917a99" width="200" height="100"> |
 
-### In purpose failed test (unsuccessfull login try)
+### Failed in purpose test (unsuccessfull login try)
 <p align="center">
     <img src="https://github.com/user-attachments/assets/fc56e307-db23-48c5-8feb-f0098845ab22" width="300" height="200">   
 </p>
-
