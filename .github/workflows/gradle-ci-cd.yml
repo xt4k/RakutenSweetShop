@@ -121,7 +121,7 @@ jobs:
     name: Prod environment pipeline
     if: github.ref == 'refs/heads/preprod'
     runs-on: ubuntu-latest
-    needs: [run-auto-test-qa, run-auto-test-ppd]
+    needs: [run-auto-test-ppd]
     environment: prod
     env:
       LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
