@@ -53,9 +53,8 @@ public class DriverHelper {
             LOG.warn("====================================================================================");
             LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
             LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
-            LOG.warn("getDriverConfig  LT_USERNAME " + getDriverConfig().ltUserName2());
-            LOG.warn("Environment variable LT_USERNAME: " + System.getenv("LT_USERNAME"));
-            //  out.println("system prop  LT_USERNAME " + getDriverConfig().ltUserName());
+            LOG.warn("getDriverConfig  LT_USERNAME " + getDriverConfig().ltUserName2() +" size = "+getDriverConfig().ltUserName2().length());
+            LOG.warn("Environment variable LT_USERNAME: " + System.getenv("LT_USERNAME")+" size = "+System.getenv("LT_USERNAME").length());
             LOG.warn("====================================================================================");
 
             if (!getDriverConfig().webRemoteDriverUrl().isBlank()) {
