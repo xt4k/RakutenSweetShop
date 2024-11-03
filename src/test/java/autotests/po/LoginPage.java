@@ -13,10 +13,9 @@ public class LoginPage extends BasePage {
     SelenideElement btnLogin = $("button[type='submit']");
 
 
-
     @Step("Get Login page header text")
     public String getPageHeader() {
-       return loginPageHeader.getText();
+        return loginPageHeader.getText();
     }
 
     @Step("Set `email address` field")

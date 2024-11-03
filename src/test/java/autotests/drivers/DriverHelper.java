@@ -15,7 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static java.lang.System.*;
+import static java.lang.System.getProperties;
+import static java.lang.System.getenv;
 
 public class DriverHelper {
     private static final Logger LOG = LoggerFactory.getLogger(TestBase.class);
@@ -61,9 +62,9 @@ public class DriverHelper {
                         "project", "Untitled",
                         "build", "build-name",
                         "name", "test-name",
-                        "username",  getDriverConfig().ltUserName2(),
+                        "username", getDriverConfig().ltUserName2(),
                         "accessKey", getDriverConfig().accessKey2()
-                       );
+                );
                 capabilities.setCapability("LT:Options", ltMap);
 
                 capabilities.setCapability("selenoid:options", Map.of("enableVNC", true, "enableVideo", true));

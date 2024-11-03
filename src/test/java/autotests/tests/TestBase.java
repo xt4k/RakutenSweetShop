@@ -9,9 +9,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static autotests.drivers.DriverHelper.*;
+import static autotests.drivers.DriverHelper.configureDriver;
 import static autotests.helpers.AttachmentsHelper.attachPageSource;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {

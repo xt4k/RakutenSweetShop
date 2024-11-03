@@ -12,7 +12,7 @@ public class AccountPage extends BasePage {
 
     @Step("Get welcome message text")
     public String getWelcomeMessage() {
-       return lblWelcomeMessage.getText();
+        return lblWelcomeMessage.getText();
     }
 
     @Step("Get Account page Header text")

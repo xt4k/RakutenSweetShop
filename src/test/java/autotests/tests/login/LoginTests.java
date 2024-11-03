@@ -5,9 +5,6 @@ import autotests.annotations.JiraIssues;
 import autotests.annotations.Layer;
 import autotests.annotations.TM4J;
 import autotests.po.AccountPage;
-import autotests.po.BasketPage;
-import autotests.pojo.BasketOrder;
-import autotests.pojo.BillingForm;
 import autotests.tests.TestBase;
 import io.qameta.allure.*;
 import org.assertj.core.api.SoftAssertions;
@@ -15,8 +12,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @Feature("Web tests")
 @Story("Login page tests")
