@@ -138,13 +138,11 @@ task runLoginLocalTest(type: Test) {
         includeTags 'positive'
     }
     systemProperty 'srv', 'local_run_remote'
-    //systemProperty 'ABCDE', System.getProperty('ABCDE', 'default_value_in_grADLE_TASK')
 }
 
 task runPpdRemoteTests(type: Test) {
     useJUnitPlatform {
-        includeTags 'main',"login","checkout", 'positive'
-        excludeTags 'failed'
+        includeTags 'main',"checkout", 'positive'
     }
     systemProperty 'srv', 'remote'
 }
