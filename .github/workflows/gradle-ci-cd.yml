@@ -13,6 +13,9 @@ jobs:
   build-and-test-qa:
     if: github.ref == 'refs/heads/qa'
     runs-on: ubuntu-latest
+    env:
+      LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
+      LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
     environment: qa # set environment
     steps:
       - name: Checkout code
@@ -31,9 +34,6 @@ jobs:
         run: rm -rf ./build/allure-results/*
 
       - name: Run tests
-        env:
-          LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
-          LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
         run: ./gradlew clean runWebRemoteTests
         continue-on-error: true
 
