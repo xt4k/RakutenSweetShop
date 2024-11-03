@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Sun Nov 03 10:07:35 UTC 2024","Sun Nov 03 10:07:35 UTC 2024","1","","Test set for checkout page.","","autotests.tests.basket.CheckoutTests","","Test set for checkout page.",""
-"broken","Sun Nov 03 10:07:35 UTC 2024","Sun Nov 03 10:07:35 UTC 2024","0","","Test set for Login page.","","autotests.tests.login.LoginTests","","Test set for Login page.",""
-"broken","Sun Nov 03 10:07:35 UTC 2024","Sun Nov 03 10:07:35 UTC 2024","0","","Test set for Sweet Shop Main Page.","","autotests.tests.e2e.MainPageOrderTests","","Test set for Sweet Shop Main Page.",""
+"broken","Sun Nov 03 10:08:41 UTC 2024","Sun Nov 03 10:08:41 UTC 2024","1","","Test set for checkout page.","","autotests.tests.basket.CheckoutTests","","Test set for checkout page.",""
+"broken","Sun Nov 03 10:08:41 UTC 2024","Sun Nov 03 10:08:41 UTC 2024","1","","Test set for Sweet Shop Main Page.","","autotests.tests.e2e.MainPageOrderTests","","Test set for Sweet Shop Main Page.",""
+"broken","Sun Nov 03 10:08:41 UTC 2024","Sun Nov 03 10:08:41 UTC 2024","0","","Test set for Login page.","","autotests.tests.login.LoginTests","","Test set for Login page.",""
