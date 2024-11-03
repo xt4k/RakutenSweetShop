@@ -21,11 +21,21 @@
 
 ### 2. Github Actions pipeline:
 <p align="left">
-    <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="200" height="100">
-    <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="200" height="100">
-    <img src="https://github.com/user-attachments/assets/3712c8a1-b93a-4eae-abe3-8bd07bfacd26" width="200" height="100">
-    <img src="https://github.com/user-attachments/assets/1a179892-5a40-4e8d-941c-1f2bd122e571" width="200" height="100">
+    <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="150" height="80">
+    <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="150" height="80">
+    <img src="https://github.com/user-attachments/assets/3712c8a1-b93a-4eae-abe3-8bd07bfacd26" width="150" height="80">
+    <img src="https://github.com/user-attachments/assets/1a179892-5a40-4e8d-941c-1f2bd122e571" width="150" height="08">
+    <img src="https://github.com/user-attachments/assets/1a179892-5a40-4e8d-941c-1f2bd122e571" width="150" height="08">
 </p>
+
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/7a5d236b-1aab-4509-948c-f1d722e18640" width="150" height="80">
+    <img src="https://github.com/user-attachments/assets/49d53fd7-3e3b-45b3-9ba1-9c6a2f86e86f" width="150" height="80">
+    <img src="https://github.com/user-attachments/assets/3e7cd927-a822-4002-83ac-6b38feabc2e4" width="150" height="80">
+    <img src="https://github.com/user-attachments/assets/18ee2aa2-d07c-423e-a2c8-98f0c54a7a2c" width="150" height="08">    
+</p>
+
+
 
 
 
