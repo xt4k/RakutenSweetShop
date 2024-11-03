@@ -54,6 +54,7 @@ public class DriverHelper {
             LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
             LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
             LOG.warn("getDriverConfig  LT_USERNAME " + getDriverConfig().ltUserName2());
+            LOG.warn("Environment variable LT_USERNAME: " + System.getenv("LT_USERNAME"));
             //  out.println("system prop  LT_USERNAME " + getDriverConfig().ltUserName());
             LOG.warn("====================================================================================");
 
