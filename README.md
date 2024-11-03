@@ -28,7 +28,7 @@
 ##### (Known GA limitation that only last Allure report is accessible).  
 #### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
 #### Here is some screenshots:
-##### QA pipeline sequence - 
+### QA pipeline sequence - 
 <p align="left">
     <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="200" height="100">
     <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="200" height="100">
@@ -42,9 +42,7 @@
     <img src="https://github.com/user-attachments/assets/18ee2aa2-d07c-423e-a2c8-98f0c54a7a2c" width="200" height="100">    
 </p>
 
-
-
-##### Preprod pipeline sequence -
+### Preprod pipeline sequence -
 <p align="left">
     <img src="https://github.com/user-attachments/assets/bc42ffa0-1e88-48d4-9f00-9966ee6ff573" width="160" height="90">
     <img src="https://github.com/user-attachments/assets/15750577-7b05-4465-bf8e-0bcd7d1479ea" width="160" height="90">
