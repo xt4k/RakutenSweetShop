@@ -44,7 +44,7 @@ public interface DriverConfig extends Config {
     @Key("access.key")
     String accessKey();
 
-    @Key("ABCDE")
+    @Key("ABC_DE")
     @DefaultValue("${env:ABC_DE}")
     //@DefaultValue("default_in_config")
     String webAbcde();

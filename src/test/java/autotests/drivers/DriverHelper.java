@@ -51,8 +51,8 @@ public class DriverHelper {
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
             LOG.warn("====================================================================================");
-            LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
-            LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
+            LOG.warn("getDriverConfig ABC_DE " + getDriverConfig().webAbcde() +" size = "+getDriverConfig().webAbcde().length());
+            LOG.warn("system env ABC_DE " + getenv("ABC_DE") +" size = "+ getenv("ABC_DE").length());
             LOG.warn("getDriverConfig  LT_USERNAME " + getDriverConfig().ltUserName2() +" size = "+getDriverConfig().ltUserName2().length());
             LOG.warn("Environment variable LT_USERNAME: " + System.getenv("LT_USERNAME")+" size = "+System.getenv("LT_USERNAME").length());
             LOG.warn("====================================================================================");
