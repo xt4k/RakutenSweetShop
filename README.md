@@ -20,6 +20,12 @@
 ###
 
 ### 2. Github Actions pipeline:
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="200" height="100">
+</p>
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9">
+
+
 #### CI-CD pipeline placed in .github/workflows folder as gradle-ci-cd.yml file. 
 #### It contain steps that should be done after pushes for every of tracked branches (qa, preprod, prod) on defined Env.
 #### Defined different testsuite content, job sequence, and environments.
