@@ -27,9 +27,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: CLean with Gradle
-        run: ./gradlew clean
-
       - name: Clean allure results directory
         run: rm -rf ./build/allure-results/*
 
@@ -38,7 +35,7 @@ jobs:
           ABC_DE: ${{ secrets.ABC_DE }}
           LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
           LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
-        run: ./gradlew runWebRemoteTests
+        run: ./gradlew clean runWebRemoteTests
         continue-on-error: true
 
       - name: Install Allure CLI
