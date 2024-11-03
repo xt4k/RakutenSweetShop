@@ -17,7 +17,11 @@
 
 **./gradlew runWebTests**
 <p align="left"> <img src="https://github.com/user-attachments/assets/3f435505-c3d0-4111-9367-363898184ed2" width="200" height="100"></p>
-
+###
+### 2. Пenerate local allure report
+**allure serve build/allure-results**
+###
+<p align="left"> <img src="https://github.com/user-attachments/assets/3dc5ea49-22ca-4f7e-a4d9-0c0cc120e2d5" width="200" height="100"></p>
 ###
 
 ### 2. Github Actions pipeline:
@@ -57,17 +61,6 @@
 
 ###
 
-### 2. generate local allure report
-
-**allure serve build/allure-results**
-
-###
-
-###
-
-![image](https://github.com/user-attachments/assets/3dc5ea49-22ca-4f7e-a4d9-0c0cc120e2d5)
-
-###
 
 ## Allure report
 
