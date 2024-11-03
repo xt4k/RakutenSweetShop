@@ -1,0 +1,345 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sweet Shop Project for trying out Chrome DevTools features">
+    <meta name="keywords" content="sweet shop,chrome, devtool, testing, development, tips, tricks">
+    <meta name="author" content="Viv Richards">
+
+    <title>Sweet Shop</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BG4T968W0C&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-131763802-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131763802-1');
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    
+    <!-- Custom shop CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+  <style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+
+  <body onload="init()">
+
+      <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              Sweet Shop
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/sweets">Sweets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/basket"><span class="badge badge-success">0</span> Basket</a>
+                <span class="sr-only">(current)</span>
+              </li>
+            </ul>
+        </div>
+      </div>
+      </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <!-- /.row -->
+      <!-- Jumbotron Header -->
+      <header class="my-4">
+          <h1 class="display-3">Your Account</h1>
+          <p class="lead">
+          Welcome back <a href="#">test@user.com</a>  
+        </p>
+        </header>
+
+      <!-- Page Features -->
+      <div class="row">
+        
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Your Basket</span>
+            <span class="badge badge-secondary badge-pill">0</span>
+          </h4>
+          <ul class="list-group mb-3" id="basketItems"></ul>
+
+
+          
+        </div>
+        <div class="col-md-8 order-md-1"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+          <h4 class="mb-3">Previous Orders</h4>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                  <table id="transactions" class="table table-hover">
+                      <thead class="">
+                        <tr>
+                          <th><a href="javascript:SortTable(0,'T');" class="order-number">Order Number</a></th>
+                          <th><a href="javascript:SortTable(1,'D','mdy');" class="order-date">Date Ordered</a></th>
+                          <th><a href="javascript:SortTable(2,'T');" class="order-description">Order Description</a></th>
+                          <th><a href="javascript:SortTable(0,'N');" class="order-total">Order Total</a></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">#1</th>
+                          <td>11th Feb 2019</td>
+                          <td>Swansea Mixture x 1</td>
+                          <td>1.50</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">#2</th>
+                          <td>11th July 2019</td>
+                          <td>Sherbert Straws x 1</td>
+                          <td>0.75</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">#3</th>
+                          <td>1st December 2019</td>
+                          <td>Chocolate Cups x 5<br>Swansea Mixture x 2</td>
+                          <td>8.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+              </div>
+            </div>
+          
+           <script type="text/javascript">
+/* 
+   Willmaster Table Sort
+   Version 1.1
+   August 17, 2016
+   Updated GetDateSortingKey() to correctly sort two-digit months and days numbers with leading 0.
+   Version 1.0, July 3, 2011
+
+   Will Bontrager
+   https://www.willmaster.com/
+   Copyright 2011,2016 Will Bontrager Software, LLC
+
+   This software is provided "AS IS," without 
+   any warranty of any kind, without even any 
+   implied warranty such as merchantability 
+   or fitness for a particular purpose.
+   Will Bontrager Software, LLC grants 
+   you a royalty free license to use or 
+   modify this software provided this 
+   notice appears on all copies. 
+*/
+//
+// One placed to customize - The id value of the table tag.
+
+var TableIDvalue = "transactions";
+
+//
+//////////////////////////////////////
+var TableLastSortedColumn = -1;
+function SortTable() {
+var sortColumn = parseInt(arguments[0]);
+var type = arguments.length > 1 ? arguments[1] : 'T';
+var dateformat = arguments.length > 2 ? arguments[2] : '';
+var table = document.getElementById(TableIDvalue);
+var tbody = table.getElementsByTagName("tbody")[0];
+var rows = tbody.getElementsByTagName("tr");
+var arrayOfRows = new Array();
+type = type.toUpperCase();
+dateformat = dateformat.toLowerCase();
+for(var i=0, len=rows.length; i<len; i++) {
+	arrayOfRows[i] = new Object;
+	arrayOfRows[i].oldIndex = i;
+	var celltext = rows[i].getElementsByTagName("td")[sortColumn].innerHTML.replace(/<[^>]*>/g,"");
+	if( type=='D' ) { arrayOfRows[i].value = GetDateSortingKey(dateformat,celltext); }
+	else {
+		var re = type=="N" ? /[^\.\-\+\d]/g : /[^a-zA-Z0-9]/g;
+		arrayOfRows[i].value = celltext.replace(re,"").substr(0,25).toLowerCase();
+		}
+	}
+if (sortColumn == TableLastSortedColumn) { arrayOfRows.reverse(); }
+else {
+	TableLastSortedColumn = sortColumn;
+	switch(type) {
+		case "N" : arrayOfRows.sort(CompareRowOfNumbers); break;
+		case "D" : arrayOfRows.sort(CompareRowOfNumbers); break;
+		default  : arrayOfRows.sort(CompareRowOfText);
+		}
+	}
+var newTableBody = document.createElement("tbody");
+for(var i=0, len=arrayOfRows.length; i<len; i++) {
+	newTableBody.appendChild(rows[arrayOfRows[i].oldIndex].cloneNode(true));
+	}
+table.replaceChild(newTableBody,tbody);
+} // function SortTable()
+
+function CompareRowOfText(a,b) {
+var aval = a.value;
+var bval = b.value;
+return( aval == bval ? 0 : (aval > bval ? 1 : -1) );
+} // function CompareRowOfText()
+
+function CompareRowOfNumbers(a,b) {
+var aval = /\d/.test(a.value) ? parseFloat(a.value) : 0;
+var bval = /\d/.test(b.value) ? parseFloat(b.value) : 0;
+return( aval == bval ? 0 : (aval > bval ? 1 : -1) );
+} // function CompareRowOfNumbers()
+
+function GetDateSortingKey(format,text) {
+if( format.length < 1 ) { return ""; }
+format = format.toLowerCase();
+text = text.toLowerCase();
+text = text.replace(/^[^a-z0-9]*/,"");
+text = text.replace(/[^a-z0-9]*$/,"");
+if( text.length < 1 ) { return ""; }
+text = text.replace(/[^a-z0-9]+/g,",");
+var date = text.split(",");
+if( date.length < 3 ) { return ""; }
+var d=0, m=0, y=0;
+for( var i=0; i<3; i++ ) {
+	var ts = format.substr(i,1);
+	if( ts == "d" ) { d = date[i]; }
+	else if( ts == "m" ) { m = date[i]; }
+	else if( ts == "y" ) { y = date[i]; }
+	}
+d = d.replace(/^0/,"");
+if( d < 10 ) { d = "0" + d; }
+if( /[a-z]/.test(m) ) {
+	m = m.substr(0,3);
+	switch(m) {
+		case "jan" : m = String(1); break;
+		case "feb" : m = String(2); break;
+		case "mar" : m = String(3); break;
+		case "apr" : m = String(4); break;
+		case "may" : m = String(5); break;
+		case "jun" : m = String(6); break;
+		case "jul" : m = String(7); break;
+		case "aug" : m = String(8); break;
+		case "sep" : m = String(9); break;
+		case "oct" : m = String(10); break;
+		case "nov" : m = String(11); break;
+		case "dec" : m = String(12); break;
+		default    : m = String(0);
+		}
+	}
+m = m.replace(/^0/,"");
+if( m < 10 ) { m = "0" + m; }
+y = parseInt(y);
+if( y < 100 ) { y = parseInt(y) + 2000; }
+return "" + String(y) + "" + String(m) + "" + String(d) + "";
+} // function GetDateSortingKey()
+</script>
+
+<h4 class="mb-3">Item Order Breakdown</h4>
+
+<canvas id="transactionChart" width="730" height="365" style="display: block; width: 730px; height: 365px;" class="chartjs-render-monitor"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script>
+    var ctx = document.getElementById('transactionChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['February', 'July', 'December'],
+            datasets: [{
+                label: '# of Items Ordered',
+                data: [1, 1, 7],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)'
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+
+            <hr class="mb-4">
+
+          
+        </div>
+
+      <!-- /.row -->
+
+    </div>
+    </div>
+    <br>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-light">
+      <div class="container">
+        <p class="m-0 text-center">Sweet Shop Project 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Cutom Shop JavaScript -->
+    <script src="js/custom.js"></script>
+    
+    <script>
+      $("#dateTime").val(new Date().toLocaleString());
+    </script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  
+
+
+</body></html>
