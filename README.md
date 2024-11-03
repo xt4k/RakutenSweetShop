@@ -57,28 +57,12 @@
 
 ### Prod pipeline 
 <p align="left">
-    <img src="https://github.com/user-attachments/assets/b7ce09de-0e43-47e0-891e-59f23876c3c3" width="200" height="100">
-    <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="200" height="100">
-    <img src="https://github.com/user-attachments/assets/3712c8a1-b93a-4eae-abe3-8bd07bfacd26" width="200" height="100">
-    <img src="https://github.com/user-attachments/assets/1a179892-5a40-4e8d-941c-1f2bd122e571" width="200" height="100">
+    <img src="https://github.com/user-attachments/assets/b7ce09de-0e43-47e0-891e-59f23876c3c3" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/cace5811-9cbb-4dff-818d-75e192c48078" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/f5d297c9-4d99-4d0a-97d1-eb53c064d87d" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/fd7a1db3-5616-4a79-bd1a-2f755dcee260" width="160" height="90">
+    <img src="https://github.com/user-attachments/assets/3e1488b6-34c3-46da-a456-85047e5d3f5f" width="160" height="90">  
 </p>
-<img width="896" alt="image" src="https://github.com/user-attachments/assets/b7ce09de-0e43-47e0-891e-59f23876c3c3">
-
-
-
-<img width="940" alt="image" src="https://github.com/user-attachments/assets/cace5811-9cbb-4dff-818d-75e192c48078">
-
-<img width="897" alt="image" src="https://github.com/user-attachments/assets/f5d297c9-4d99-4d0a-97d1-eb53c064d87d">
-
-
-<img width="940" alt="image" src="https://github.com/user-attachments/assets/fd7a1db3-5616-4a79-bd1a-2f755dcee260">
-
-
-<img width="949" alt="image" src="https://github.com/user-attachments/assets/3e1488b6-34c3-46da-a456-85047e5d3f5f">
-
-
-
-
 ###
 
 
