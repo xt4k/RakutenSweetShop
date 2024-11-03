@@ -68,6 +68,7 @@ jobs:
     name: Preprod environment pipeline
     if: github.ref == 'refs/heads/preprod'
     runs-on: ubuntu-latest
+    needs: [run-auto-test-qa]
     environment: ppd
     env:
       LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
