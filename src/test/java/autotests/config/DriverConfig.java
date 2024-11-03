@@ -4,8 +4,8 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "system:properties",
         "system:env",
+        "system:properties",
         "classpath:config/${srv}_driver.properties",
         "classpath:config/app.properties"
 })
