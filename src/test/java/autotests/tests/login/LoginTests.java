@@ -5,9 +5,6 @@ import autotests.annotations.JiraIssues;
 import autotests.annotations.Layer;
 import autotests.annotations.TM4J;
 import autotests.po.AccountPage;
-import autotests.po.BasketPage;
-import autotests.pojo.BasketOrder;
-import autotests.pojo.BillingForm;
 import autotests.tests.TestBase;
 import io.qameta.allure.*;
 import org.assertj.core.api.SoftAssertions;
@@ -16,11 +13,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 @Feature("Web tests")
 @Story("Login page tests")
-@Tags({@Tag("web"), @Tag("Sweet_Shop")})
+@Tags({@Tag("web"), @Tag("Sweet_Shop"), @Tag("login")})
 @Owner("other guy")
 @JiraIssues({@JiraIssue("AUTO-865")})
 @DisplayName("Test set for Login page.")
@@ -57,7 +52,7 @@ public class LoginTests extends TestBase {
     @Test
     @JiraIssues({@JiraIssue("AUTO-9513")})
     @TM4J("8521")
-    @Tag("positive")
+    @Tag("failed")
     @DisplayName("Testcase 6. Negative Login test. FAILED IN PURPOSE!")
     @Description("Testcase 6. Negative Login test. FAILED IN PURPOSE!")
     void loginUnHappyPath() {

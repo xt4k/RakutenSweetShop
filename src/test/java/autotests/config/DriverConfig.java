@@ -4,6 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
+        "system:env",
         "system:properties",
         "classpath:config/${srv}_driver.properties",
         "classpath:config/app.properties"
@@ -34,11 +35,12 @@ public interface DriverConfig extends Config {
     @Key("video.storage")
     String videoStorage();
 
-    @Key("remote")
-    String remote();
-
     @Key("base.url")
     String baseUrl();
 
+    @Key("access.key")
+    String accessKey();
 
+    @DefaultValue("${env:LT_USERNAME}")
+    String ltUserName();
 }

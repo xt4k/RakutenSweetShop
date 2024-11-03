@@ -112,9 +112,46 @@ task runWebTests(type: Test) {
     systemProperty 'srv', 'local'
 }
 
+task runWebRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'web'
+    }
+    systemProperty 'srv', 'remote'
+}
+
 task runLoginTests(type: Test) {
     useJUnitPlatform {
         includeTags 'login'
     }
     systemProperty 'srv', 'local'
+}
+
+task runLoginRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'positive'
+    }
+    systemProperty 'srv', 'remote'
+}
+
+task runLoginLocalTest(type: Test) {
+    useJUnitPlatform {
+        includeTags 'positive'
+    }
+    systemProperty 'srv', 'local_run_remote'
+    //systemProperty 'ABCDE', System.getProperty('ABCDE', 'default_value_in_grADLE_TASK')
+}
+
+task runPpdRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'main',"login","checkout"
+        excludeTags 'failed'
+    }
+    systemProperty 'srv', 'remote'
+}
+
+task runProdRemoteTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'main',"checkout"
+    }
+    systemProperty 'srv', 'remote'
 }
