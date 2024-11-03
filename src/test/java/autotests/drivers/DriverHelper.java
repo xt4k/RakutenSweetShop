@@ -15,12 +15,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
+import static java.lang.System.*;
 
 public class DriverHelper {
     private static final Logger LOG = LoggerFactory.getLogger(TestBase.class);
 
     public static DriverConfig getDriverConfig() {
-        return ConfigFactory.newInstance().create(DriverConfig.class, System.getProperties());
+        return ConfigFactory.newInstance().create(DriverConfig.class, getProperties());
     }
 
 
@@ -48,20 +49,21 @@ public class DriverHelper {
             chromeOptions.setExperimentalOption("prefs", prefs);
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
-/*          LOG.warn("system prop  LT_USERNAME " + System.getProperty("LT_USERNAME"));
-            LOG.warn("system env  LT_USERNAME " + System.getenv("LT_USERNAME"));
             LOG.warn("====================================================================================");
-            LOG.warn("system env  ABC_DE " + System.getenv("ABC_DE"));
-            LOG.warn("system prop  ABC_DE " + System.getProperty("ABC_DE"));
-            LOG.warn("====================================================================================");*/
-            // LOG.warn("system eтv  LT_ACCESS_KEY "+ System.getProperty(""));
+            LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
+            LOG.warn("system prop  ABCDE " + getDriverConfig().webAbcde());
+            LOG.warn("getDriverConfig  LT_USERNAME " + getDriverConfig().ltUserName2());
+            //  out.println("system prop  LT_USERNAME " + getDriverConfig().ltUserName());
+            LOG.warn("====================================================================================");
 
             if (!getDriverConfig().webRemoteDriverUrl().isBlank()) {
-                Map ltMap = Map.of("username", System.getenv("LT_USERNAME"),// getDriverConfig().ltUserName(),
-                        "accessKey", System.getenv("LT_ACCESS_KEY"),//getDriverConfig().accessKey(),
+                Map ltMap = Map.of(
                         "project", "Untitled",
                         "build", "build-name",
-                        "name", "test-name");
+                        "name", "test-name",
+                        "username",  getDriverConfig().ltUserName2(),
+                        "accessKey", getDriverConfig().accessKey2()
+                       );
                 capabilities.setCapability("LT:Options", ltMap);
 
                 capabilities.setCapability("selenoid:options", Map.of("enableVNC", true, "enableVideo", true));
@@ -75,7 +77,7 @@ public class DriverHelper {
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = getDriverConfig().baseUrl();
         LOG.warn(":::Configuration.baseUrl::: " + Configuration.baseUrl);
-        LOG.warn("system emv secret LT_USERNAME " + System.getenv("LT_USERNAME"));
+        LOG.warn("system emv secret LT_USERNAME " + getenv("LT_USERNAME"));
         LOG.warn("LT_USERNAME getconfig: " + getDriverConfig().ltUserName());
     }
 }

@@ -37,12 +37,19 @@ public interface DriverConfig extends Config {
     @Key("base.url")
     String baseUrl();
 
-    @Key("lt.user.name")
+    @Key("${env:LAMBDA_TEST_USERNAME}")
     String ltUserName();
 
     @Key("access.key")
     String accessKey();
 
+    @Key("ABCDE")
+    @DefaultValue("default_in_config")
+    String webAbcde();
 
+    @Key("${env:LT_USERNAME}")
+    String ltUserName2();
 
+    @Key("${env:LT_ACCESS_KEY}")
+    String accessKey2();
 }

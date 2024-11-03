@@ -132,3 +132,11 @@ task runLoginRemoteTests(type: Test) {
     }
     systemProperty 'srv', 'remote'
 }
+
+task runLoginLocalTest(type: Test) {
+    useJUnitPlatform {
+        includeTags 'positive'
+    }
+    systemProperty 'srv', 'local_run_remote'
+    //systemProperty 'ABCDE', System.getProperty('ABCDE', 'default_value_in_grADLE_TASK')
+}
