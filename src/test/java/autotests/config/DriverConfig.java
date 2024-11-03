@@ -50,7 +50,6 @@ public interface DriverConfig extends Config {
     String webAbcde();
 
     @Key("${env:LT_USERNAME}")
-    @DefaultValue("${env:LT_USERNAME}")
     String ltUserName2();
 
     @Key("${env:LT_ACCESS_KEY}")
