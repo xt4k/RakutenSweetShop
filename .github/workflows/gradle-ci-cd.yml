@@ -17,7 +17,7 @@ jobs:
     env:
       LT_USERNAME: ${{ secrets.LAMBDA_TEST_USERNAME }}
       LT_ACCESS_KEY: ${{ secrets.LAMBDA_TEST_ACCESS_KEY }}
-    environment: qa # set environment
+    environment: qa
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -34,7 +34,7 @@ jobs:
       - name: Clean allure results directory
         run: rm -rf ./build/allure-results/*
 
-      - name: Run tests
+      - name: Run tests on QA environment with `QA testsuite`
         run: ./gradlew clean runWebRemoteTests
         continue-on-error: true
 
@@ -47,21 +47,22 @@ jobs:
       - name: Verify Allure CLI version
         run: allure --version
 
-      - name: Generate Allure Report
+      - name: Generate Allure Report for QA environment test run
         run: |
           allure generate ./build/allure-results --clean -o ./build/allure-report
 
-      - name: Upload Allure Report
+      - name: Upload QA environment Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: ./build/allure-report
 
-      - name: Deploy Allure Report to GitHub Pages
+      - name: Deploy QA environment Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/allure-report
+
   # Job for Preprod Environment
   run-auto-test-ppd:
     name: Preprod environment pipeline
@@ -87,7 +88,7 @@ jobs:
       - name: Clean allure results directory
         run: rm -rf ./build/allure-results/*
 
-      - name: Run tests  (Preprod environment testsuite)
+      - name: Run tests on PPD environment with `PPD testsuite`
         run: ./gradlew clean runPpdRemoteTests
         continue-on-error: true
 
@@ -100,17 +101,17 @@ jobs:
       - name: Verify Allure CLI version
         run: allure --version
 
-      - name: Generate Allure Report (Preprod environment)
+      - name:  Generate Allure Report for PPD environment test run
         run: |
           allure generate ./build/allure-results --clean -o ./build/allure-report
 
-      - name: Upload Allure Report (Preprod environment)
+      - name: Upload Preprod environment Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: ./build/allure-report
 
-      - name: Deploy Allure Report to GitHub Pages (Preprod environment)
+      - name: Deploy Preprod environment Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -141,7 +142,7 @@ jobs:
       - name: Clean allure results directory
         run: rm -rf ./build/allure-results/*
 
-      - name: Run tests (Prod environment testsuite)
+      - name: Run tests on Prod environment with `Prod testsuite`
         run: ./gradlew clean runProdRemoteTests
         continue-on-error: true
 
@@ -154,17 +155,17 @@ jobs:
       - name: Verify Allure CLI version
         run: allure --version
 
-      - name: Generate Allure Report (Prod environment)
+      - name: Generate Allure Report for Prod environment test run
         run: |
           allure generate ./build/allure-results --clean -o ./build/allure-report
 
-      - name: Upload Allure Report (Prod environment)
+      - name: Upload Prod environment Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: ./build/allure-report
 
-      - name: Deploy Allure Report to GitHub Pages (Prod environment)
+      - name: Deploy Prod environment Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -176,4 +177,4 @@ jobs:
           USERNAME: ${{ secrets.PROD_USERNAME }}
           PASSWORD: ${{ secrets.PROD_PASSWORD }}
         run: |
-          echo "Deploying to Production environment!"
+          echo "Other commands for Deploying to Production environment!"
