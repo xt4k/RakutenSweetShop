@@ -20,13 +20,20 @@
 ###
 
 ### 2. Github Actions pipeline:
+#### CI-CD pipeline placed in .github/workflows folder as gradle-ci-cd.yml file. 
+#### It contain steps that should be done after pushes for every of tracked branches (qa, preprod, prod) on defined Env.
+#### Defined different testsuite content, job sequence, and environments.
+#### After test run completion testrun result is archived and published. Also generated testrun Allure report
+##### (Known GA limitation that only last Allure report is accessible).  
+#### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
+#### Here is some screenshots:
+##### QA pipeline sequence - 
 <p align="left">
     <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="200" height="100">
     <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="200" height="100">
     <img src="https://github.com/user-attachments/assets/3712c8a1-b93a-4eae-abe3-8bd07bfacd26" width="200" height="100">
     <img src="https://github.com/user-attachments/assets/1a179892-5a40-4e8d-941c-1f2bd122e571" width="200" height="100">
 </p>
-
 <p align="left">
     <img src="https://github.com/user-attachments/assets/7a5d236b-1aab-4509-948c-f1d722e18640" width="200" height="100">
     <img src="https://github.com/user-attachments/assets/49d53fd7-3e3b-45b3-9ba1-9c6a2f86e86f" width="200" height="100">
@@ -36,21 +43,19 @@
 
 
 
-
-
-
-
-
-#### CI-CD pipeline placed in .github/workflows folder as gradle-ci-cd.yml file. 
-#### It contain steps that should be done after pushes for every of tracked branches (qa, preprod, prod) on defined Env.
-#### Defined different testsuite content, job sequence, and environments.
-#### After test run completion testrun result is archived and published. Also generated testrun Allure report
-##### (Known GA limitation that only last Allure report is accessible).  
-#### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
-#### Here is some screenshots:
-##### QA pipeline sequence - 
-
 ##### Preprod pipeline sequence -
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/bc42ffa0-1e88-48d4-9f00-9966ee6ff573" width="180" height="90">
+    <img src="https://github.com/user-attachments/assets/15750577-7b05-4465-bf8e-0bcd7d1479ea" width="180" height="90">
+    <img src="https://github.com/user-attachments/assets/5ec0d7bd-6780-4ed6-8a50-fd919e4e9b20" width="180" height="90">
+    <img src="https://github.com/user-attachments/assets/12bad319-b8ae-4d1e-85d7-f44ed271931a" width="180" height="90">
+    <img src="https://github.com/user-attachments/assets/dfcdcabe-e071-4930-838b-c78ae86d4fe7" width="180" height="90">
+</p>
+
+<img width="951" alt="image" src="https://github.com/user-attachments/assets/d46a0826-2d52-4100-9ed2-d089d0763b51">
+
+
+
 
 ##### Prod pipeline sequence -
 
