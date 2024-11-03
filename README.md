@@ -88,28 +88,14 @@
 ![image](https://github.com/user-attachments/assets/fc56e307-db23-48c5-8feb-f0098845ab22)
 
 ### Positive tests (with last screen screenshot)
-|  1. All the selected items are present in basket. |  2. Test the total price in GBP is correct i.e., matches the price of individual items based on quantity. | 3. Change the delivery type to Standard Shipping and verify the total price.|                                                                                                      
+|  1. All the selected items are present in basket |  2. Test the total price in GBP is correct the price of individual items based on quantity match | 3. Change the delivery type to Standard Shipping and verify the total price |  
 |:----------------------:|:---------:|:------------:|
 |<div align="center"> <img src="https://github.com/user-attachments/assets/80d09586-308e-4b2e-8ac2-62a41706dad7" width="200" height="100"></div> | <img src="https://github.com/user-attachments/assets/1bc13509-164c-41d2-9a25-e4d1df627ff2" width="200" height="100"> | <img src="https://github.com/user-attachments/assets/87171963-64eb-4fde-8606-b014245e6803" width="200" height="100"> |
 
 
-### 1. All the selected items are present in basket.
-
-![image](https://github.com/user-attachments/assets/80d09586-308e-4b2e-8ac2-62a41706dad7)
-
-###
-
-### 2. Test the total price in GBP is correct i.e., matches the price of individual items based on quantity.
-
-![image](https://github.com/user-attachments/assets/1bc13509-164c-41d2-9a25-e4d1df627ff2)
-
-###
-
-### 3. Change the delivery type to Standard Shipping and verify the total price.
-
-![image](https://github.com/user-attachments/assets/87171963-64eb-4fde-8606-b014245e6803)
-
-###
+|  4. Fill the details and click on checkout. |  5. Login to account |  
+|:----------------------:|:---------:|
+|<div align="center"> <img src="https://github.com/user-attachments/assets/2776be5a-6655-4058-87b1-d69cdf3e83fb" width="200" height="100"></div>  <img src="https://github.com/user-attachments/assets/a7ba7f0c-e9d8-4e27-a8ef-0af1502234de" width="200" height="100"> <img src="https://github.com/user-attachments/assets/780ba6ee-9342-4747-928f-c7714ce942a3" width="200" height="100"></div>  | <img src="https://github.com/user-attachments/assets/73c48c18-7a1a-45b5-b90e-6da89f917a99" width="200" height="100"> |
 
 ### 4. Fill the details and click on checkout.
 
