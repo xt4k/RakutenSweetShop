@@ -20,10 +20,14 @@
 ###
 
 ### 2. Github Actions pipeline:
-<p align="center">
+<p align="left">
     <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="200" height="100">
+    <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="200" height="100">
+    <img src="https://github.com/user-attachments/assets/3712c8a1-b93a-4eae-abe3-8bd07bfacd26" width="200" height="100">
 </p>
-<img width="818" alt="image" src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9">
+
+
+
 
 
 #### CI-CD pipeline placed in .github/workflows folder as gradle-ci-cd.yml file. 
