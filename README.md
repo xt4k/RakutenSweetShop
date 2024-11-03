@@ -70,11 +70,16 @@
 
 ### Common report info
 
+
 ### Testsuites
 
 ![image](https://github.com/user-attachments/assets/89551d0b-6e1a-4632-9069-080a6adb3950)
 
 ###
+|  Failed test information |  Positive tests | Java | Junit5 | Gradle | Selenide | Allure | LambdaTest |                                                                                                      
+|:----------------------:|:----:|:----:|:------:|:------:|:--------:|:-------:|:---------:|
+|<div align="center"> <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40" height="40"></div> | <img src="https://user-images.githubusercontent.com/38681283/120561799-e88b6300-c40d-11eb-91ba-d4103ef6d4b5.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120561837-f7721580-c40d-11eb-8590-7b3b0b5eb50d.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562013-43bd5580-c40e-11eb-926f-1b8d3dc9e965.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562398-fbeafe00-c40e-11eb-9fe7-3a641bf7115c.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562458-1c1abd00-c40f-11eb-8ce8-2eb023f3e24f.png" width="40" height="40"> | <img src="https://user-images.githubusercontent.com/38681283/120562749-b5e26a00-c40f-11eb-91d9-641e254428c9.png" width="40" height="40"> | <img src="https://bitrise-steplib-collection.s3.amazonaws.com/steps/lambdatest-upload/assets/icon.svg" width="40" height="40"> |
+
 
 ## :arrow_forward: Failed test information
 
@@ -83,6 +88,10 @@
 ![image](https://github.com/user-attachments/assets/fc56e307-db23-48c5-8feb-f0098845ab22)
 
 ### Positive tests (with last screen screenshot)
+|  1. All the selected items are present in basket. |  2. Test the total price in GBP is correct i.e., matches the price of individual items based on quantity. | 3. Change the delivery type to Standard Shipping and verify the total price.|                                                                                                      
+|:----------------------:|:---------:|:------------:|
+|<div align="center"> <img src="https://github.com/user-attachments/assets/80d09586-308e-4b2e-8ac2-62a41706dad7" width="200" height="100"></div> | <img src="https://github.com/user-attachments/assets/1bc13509-164c-41d2-9a25-e4d1df627ff2" width="200" height="100"> | <img src="https://github.com/user-attachments/assets/87171963-64eb-4fde-8606-b014245e6803" width="200" height="100"> |
+
 
 ### 1. All the selected items are present in basket.
 
