@@ -32,7 +32,7 @@
 ###### (Known GA limitation that only last Allure report is accessible).  
 ##### Allure report and test run artifact archive may be found in `pages-build-deployment` Actions
 #### Pipeline screenshots:
-### QA pipeline sequence - 
+### QA pipeline
 <p align="left">
     <img src="https://github.com/user-attachments/assets/35a39253-7070-400d-b6e0-515d940fa0c9" width="200" height="100">
     <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="200" height="100">
@@ -46,7 +46,7 @@
     <img src="https://github.com/user-attachments/assets/18ee2aa2-d07c-423e-a2c8-98f0c54a7a2c" width="200" height="100">    
 </p>
 
-### Preprod pipeline sequence -
+### Preprod pipeline 
 <p align="left">
     <img src="https://github.com/user-attachments/assets/bc42ffa0-1e88-48d4-9f00-9966ee6ff573" width="160" height="90">
     <img src="https://github.com/user-attachments/assets/15750577-7b05-4465-bf8e-0bcd7d1479ea" width="160" height="90">
@@ -55,7 +55,27 @@
     <img src="https://github.com/user-attachments/assets/d46a0826-2d52-4100-9ed2-d089d0763b51" width="160" height="90">
 </p>
 
-##### Prod pipeline sequence -
+### Prod pipeline 
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/b7ce09de-0e43-47e0-891e-59f23876c3c3" width="200" height="100">
+    <img src="https://github.com/user-attachments/assets/7fa5d8fc-e69a-4f73-94a0-9bb5b8e724a3" width="200" height="100">
+    <img src="https://github.com/user-attachments/assets/3712c8a1-b93a-4eae-abe3-8bd07bfacd26" width="200" height="100">
+    <img src="https://github.com/user-attachments/assets/1a179892-5a40-4e8d-941c-1f2bd122e571" width="200" height="100">
+</p>
+<img width="896" alt="image" src="https://github.com/user-attachments/assets/b7ce09de-0e43-47e0-891e-59f23876c3c3">
+
+
+
+<img width="940" alt="image" src="https://github.com/user-attachments/assets/cace5811-9cbb-4dff-818d-75e192c48078">
+
+<img width="897" alt="image" src="https://github.com/user-attachments/assets/f5d297c9-4d99-4d0a-97d1-eb53c064d87d">
+
+
+<img width="940" alt="image" src="https://github.com/user-attachments/assets/fd7a1db3-5616-4a79-bd1a-2f755dcee260">
+
+
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/3e1488b6-34c3-46da-a456-85047e5d3f5f">
+
 
 
 
